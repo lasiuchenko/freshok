@@ -3,4 +3,19 @@
 @import "reset";
 @import "global";
 
+.header {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  &__contact {
+  }
+}
+
 @import "media";
