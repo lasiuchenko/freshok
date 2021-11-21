@@ -11,60 +11,83 @@
 
 <body>
 	<header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="header__inner-top">
-					<nav class="menu">
-						<ul class="menu__contact">
-							<li class="menu__contact-item">
-								<a class="menu__contact-link" href="#">адрес и
-									время
-									доставки</a>
-							</li>
+		<div class="header__top">
+			<div class="container">
+				<nav class="menu">
+					<ul class="menu__contact">
+						<li class="menu__contact-item menu__contact-item--del">
+							<a class="menu__contact-link" href="#">адрес и
+								время
+								доставки</a>
+						</li>
 
-							<li class="menu__contact-item">
-								<a class="menu__contact-link" href="#">горячая
-									линия
-									24/7</a>
-							</li>
-						</ul>
+						<li class="menu__contact-item menu__contact-item--tel">
+							<a class="menu__contact-link" href="#">горячая
+								линия
+								24/7</a>
+						</li>
+					</ul>
 
-						<ul class="menu__info">
-							<li class="menu__info-item">
-								<a class="menu__info-link" href="#">Доставка</a>
-							</li>
+					<ul class="menu__info">
+						<li class="menu__info-item">
+							<a class="menu__info-link" href="#">Доставка</a>
+						</li>
 
-							<li class="menu__info-item">
-								<a class="menu__info-link" href="#">О нас</a>
-							</li>
+						<li class="menu__info-item">
+							<a class="menu__info-link" href="#">О нас</a>
+						</li>
 
-							<li class="menu__info-item">
-								<a class="menu__info-link" href="#">Новости</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+						<li class="menu__info-item">
+							<a class="menu__info-link" href="#">Новости</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
-				<div class="header__inner-bottom">
-					<div class="logo">
-						<a class="logo__img" href="images/logo.svg"></a>
-					</div>
+		<div class="header__bottom">
+			<div class="container">
+				<div class="header__wrap">
+					<a class="logo" href="#">
+						<img class="logo__img" src="images/logo.svg"></>
+					</a>
 
-					<div class="catalog">Каталог продуктов</div>
+					<div class="finder">
+						<div class="accordeon">
+							<div class="catalog">Каталог продуктов</div>
+							<ul class="catalog__list">
+								<li class="catalog__item">Овощи и фрукты</li>
+								<li class="catalog__item">Бакалея</li>
+								<li class="catalog__item">Молочные продукты</li>
+								<li class="catalog__item">Хлеб</li>
+								<li class="catalog__item">Мясо</li>
+								<li class="catalog__item">Колбаса</li>
+								<li class="catalog__item">Рыба</li>
+								<li class="catalog__item">Алкоголь</li>
+								<li class="catalog__item">Напитки</li>
+								<li class="catalog__item">Торты</li>
+								<li class="catalog__item">Мясо</li>
+								<li class="catalog__item">Чай, кофе</li>
+							</ul>
+						</div>
 
-					<div class="search">
-						<div class="search__text">Найти в магазине ...</div>
-						<button class="search__btn" type="button">Поиск</button>
+						<form class="search" method="get">
+							<label class="search__label" for="search"></label>
+							<input class="search__field" id="search" name="search"
+								placeholder="Найти в магазине ..." type="search">
+						</form>
+
+						<button class="search__btn" type="submit">Поиск</button>
 					</div>
 
 					<div class="user-nav">
-						<a class="user-nav__link" href=#></a>
+						<a class="user-nav__link user-nav__link--user" href=#></a>
 
-						<a class="user-nav__link" href="#">
+						<a class="user-nav__link user-nav__link--heart" href="#">
 							<span class="user-nav__num">12</span>
 						</a>
 
-						<a class="user-nav__link" href="#">
+						<a class="user-nav__link user-nav__link--cart" href="#">
 							<span class="user-nav__num">12</span>
 						</a>
 					</div>

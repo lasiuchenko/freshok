@@ -1,4 +1,8 @@
 body {
+  @extend %open-sans-400;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
   color: $default;
 }
 

@@ -1,6 +1,38 @@
 $default: #505050;
+$dark-green: #31352B;
+$green: #63A60F;
 
 %ruda-700 {
   font-family: "Ruda", sans-serif;
   font-weight: 700;
+}
+
+%ruda-500 {
+  font-family: "Ruda", sans-serif;
+  font-weight: 500;
+}
+
+%ruda-400 {
+  font-family: "Ruda", sans-serif;
+  font-weight: 400;
+}
+
+%open-sans-700 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+%open-sans-600 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+%open-sans-400 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+%open-sans-300 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
