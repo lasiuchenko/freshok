@@ -80,7 +80,6 @@
 
 .finder {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 845px;
   width: 100%;
@@ -133,13 +132,11 @@
 
 .search {
   position: relative;
+  margin-right: 15px;
   display: flex;
   align-items: center;
-  padding: 14px 50px;
   width: 100%;
-  background-color: $white;
   box-shadow: 0 0 0 rgba(99, 166, 14, 0.2);
-  border-radius: 6px 0 0 6px;
 
   &::before {
     content: "";
@@ -153,20 +150,23 @@
     background-position: center;
   }
 
-  &__field {
+  &__wrap {
+    display: flex;
+    max-width: 576px;
     width: 100%;
   }
 
-  &__btn {
-    margin-right: 15px;
-    padding: 15px 52px;
-    max-width: 157px;
+  &__field {
     width: 100%;
-    border-radius: 0 6px 6px 0;
+    padding: 14px 50px;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &__btn {
+    max-width: 157px;
+    padding: 15px 52px;
     background-color: $dark-green;
     @extend %open-sans-600;
-    color: $white;
-    text-transform: uppercase;
   }
 
 }
