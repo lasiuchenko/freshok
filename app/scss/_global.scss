@@ -11,3 +11,14 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.btn {
+  padding: 12px 24px;
+  @extend %open-sans-400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  background-color: $green;
+  border-radius: 6px;
+  color: $white;
+}
