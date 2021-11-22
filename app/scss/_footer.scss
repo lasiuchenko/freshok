@@ -1,0 +1,121 @@
+.footer {
+  background-color: $dark-green;
+  padding: 30px 0;
+  color: $white;
+}
+
+.footer-head {
+  margin-bottom: 30px;
+}
+
+.footer-body {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &__form {
+    display: block;
+    max-width: 306px;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  &__form-wrap {
+    display: flex;
+  }
+
+  &__field {
+    max-width: 180px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &__btn {
+    max-width: 126px;
+    padding: 12px 16px;
+    background-color: $green;
+    @extend %open-sans-700;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 467px;
+    width: 100%;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact-wrap {
+    display: flex;
+    margin-bottom: 18px;
+  }
+
+  &__addres {
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__icon:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+
+  &__copy {
+    display: flex;
+    align-items: center;
+  }
+
+  &__payments {
+    display: flex;
+  }
+
+  &__payments-visa {
+    margin-right: 24px;
+    width: 93px;
+  }
+
+  &__payments-mastercard {
+    width: 49px;
+  }
+
+  &__payments-visa,
+  &__payments-mastercard {
+    height: 29px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

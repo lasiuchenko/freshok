@@ -1,9 +1,20 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   @extend %open-sans-400;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   color: $default;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
@@ -21,4 +32,24 @@ body {
   background-color: $green;
   border-radius: 6px;
   color: $white;
+}
+
+.form-btn {
+  width: 100%;
+  border-radius: 0 6px 6px 0;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
