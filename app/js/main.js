@@ -1,16 +1,21 @@
 $(function () {
-	$('.top-slider__list').slick({
+    $('.top-slider__list').slick( {
         dots: false,
         infinite: false,
-				slidesToShow: 1,
-    });
+        slidesToShow: 1,
+      }
+
+    );
 
 
-	$(document).ready(function() {
-		$('.catalog').on('click', function () {
-			$(this).next().slideToggle(2000);
-		});
-	})
+    $('.accordeon').on('click', function() {
+        $('.catalog__list').toggleClass('catalog__list--active');
+        $('.catalog').toggleClass('catalog--active');
+        $('.accordeon').toggleClass('accordeon--active');
+      }
 
-	
-})
+    );
+
+  }
+
+)

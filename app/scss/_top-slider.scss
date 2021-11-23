@@ -23,6 +23,7 @@
 
   &__title {
     width: 100%;
+    max-width: 740px;
     margin-bottom: 12px;
     @extend %ruda-900;
     line-height: 1.3;

@@ -98,9 +98,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: border-radius 0.3s, background-color 0.5s;
+
+  &--active {
+    background-color: $light-green;
+    border-radius: 6px 6px 0 0;
+  }
 }
 
 .catalog {
+
   &::before {
     content: "";
     position: absolute;
@@ -121,12 +128,60 @@
     height: 4px;
     transform: translateY(0);
     background-image: url('../images/icons/icon-arrow.svg');
+    transition: transform 0.5s;
+  }
+
+  &--active.catalog::after {
+    transform: rotate(180deg);
   }
 
   &__list {
+    position: absolute;
+    left: 0;
+    top: 93%;
+    z-index: 1;
+    width: 180px;
     width: 100%;
-    display: none;
     height: 600px;
+    background-color: $white;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform 0.9s;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__list--active {
+    transform: scaleY(1);
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    font-size: 16px;
+    line-height: 1.2;
+    color: $black;
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+
+
+  &__item:hover {
+    color: $green;
+    border-left: 3px solid $green;
+  }
+
+  &__item:active {
+    color: $dark-silver;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 24px;
+    outline: 0;
+    transition: box-shadow 0.5s;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 3px $light-green;
   }
 }
 
