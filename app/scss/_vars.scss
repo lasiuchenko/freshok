@@ -1,8 +1,28 @@
 $default: #505050;
+$silver: #F6F6F6;
+$dark: #121212;
 $white: #ffffff;
 $dark-green: #31352B;
 $green: #63A60F;
 $red: #CF3E3B;
+
+%btn {
+  padding: 12px 24px;
+  @extend %open-sans-400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  background-color: $green;
+  border-radius: 6px;
+  color: $white;
+}
+
+%form-btn {
+  width: 100%;
+  border-radius: 0 6px 6px 0;
+  color: $white;
+  text-transform: uppercase;
+}
 
 
 %ruda-900 {

@@ -163,6 +163,7 @@
   }
 
   &__btn {
+    @extend %form-btn;
     max-width: 157px;
     padding: 15px 52px;
     background-color: $dark-green;

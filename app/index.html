@@ -76,8 +76,7 @@
 							<div class="search__wrap">
 								<input class="search__field" id="search" name="search"
 									placeholder="Найти в магазине ..." type="search">
-								<button class="search__btn form-btn"
-									type="submit">Поиск</button>
+								<button class="search__btn" type="submit">Поиск</button>
 							</div>
 						</form>
 					</div>
@@ -101,63 +100,104 @@
 	<main class="main">
 		<section class="top-slider">
 			<ul class="top-slider__list">
-				<li class="top-slider__item"
-					style="background-image: url(images/slider-bg/slider-bg-carrot.jpg);">
+				<div>
+					<li class="top-slider__item"
+						style="background-image: url(images/slider-bg/slider-bg-carrot.jpg);">
+						<div class="top-slider__wrap">
+							<div class="container">
+								<div class="top-slider__inner">
+									<h3 class="top-slider__title">
+										Свежачек вам в хату
+										<span clas="top-slider__title top-slider__title--red">
+											Скидка -50%
+										</span>
+									</h3>
 
-					<div class="top-slider__item-inner">
-						<h1 class="top-slider__item-title">Свежачек вам в хату
-							<span class="top-slider__item-title top-slider__item-title--red">
-								Скидка -50%
-							</span>
-						</h1>
+									<div class="top-slider__text">
+										<p>
+											Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
+											50%. Торопитесь!
+										</p>
+									</div>
 
-						<div class="top-slider__item-text">
-							<p>Только с 7 по 13 июля скидка на сезонные
-								фрукты и
-								овощи до 50%.
-								Торопитесь!
-							</p>
+									<a class="top-slider__link" href="#">Купить сейчас</a>
+								</div>
+							</div>
 						</div>
+					</li>
+				</div>
 
-						<a class="btn" href="#">Купить сейчас</a>
-					</div>
-				</li>
+				<div>
+					<li class="top-slider__item"
+						style="background-image: url(images/slider-bg/slider-bg-tomatoes.jpg);">
+						<div class="top-slider__wrap">
+							<div class="container">
+								<div class="top-slider__inner">
+									<h3 class="top-slider__title">
+										Накрути себе томатов
+										<span clas="top-slider__title top-slider__title--red">
+											акция: 3 кг по цене 1
+										</span>
+									</h3>
 
-				<li class="top-slider__item"
-					style="background-image: url(images/slider-bg/slider-bg-tomatoes.jpg);">
+									<div class="top-slider__text">
+										<p>
+											Только с 12 по 15 июля скидка на домашние
+											помидорчики
+										</p>
+									</div>
 
-					<div class="top-slider__item-inner">
-						<h1 class="top-slider__item-title">Накрути себе томатов
-							<span class="top-slider__item-title top-slider__item-title--red">
-								акция: 3 кг по цене 1
-							</span>
-						</h1>
-
-						<div class="top-slider__item-text">
-							<p>Только с 12 по 15 июля скидка на домашние
-								помидорчики</p>
+									<a class="top-slider__link" href="#">Купить сейчас</a>
+								</div>
+							</div>
 						</div>
+					</li>
+				</div>
 
-						<a class="btn" href="#">Купить сейчас</a>
-					</div>
-				</li>
+				<div>
+					<li class="top-slider__item"
+						style="background-image: url(images/slider-bg/slider-bg-salad.jpg);">
+						<div class="top-slider__wrap">
+							<div class="container">
+								<div class="top-slider__inner">
+									<h3 class="top-slider__title">
+										Пусть остальные
+										позеленеют от зависти
+										<span clas="top-slider__title top-slider__title--red">
+											Распродажа зелени
+										</span>
+									</h3>
 
-				<li class="top-slider__item"
-					style="background-image: url(images/slider-bg/slider-bg-salad.jpg);">
-
-					<div class="top-slider__item-inner">
-						<h1 class="top-slider__item-title">Пусть остальные
-							позеленеют от зависти
-							<span class="top-slider__item-title top-slider__item-title--red">
-								Распродажа зелени
-							</span>
-						</h1>
-
-						<a class="btn" href="#">Купить сейчас</a>
-					</div>
-				</li>
+									<a class="top-slider__link" href="#">Купить сейчас</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
 			</ul>
+
+			<div class="advantage">
+				<div class="container">
+					<ul class="advantage__list">
+						<li class="advantage__item advantage__item--del">
+							<h4 class="advantage__title">Бесплатная доставка</h4>
+							<div class="advantage__text">Для заказов на сумму от 500 ₽</div>
+						</li>
+						<li class="advantage__item advantage__item--return">
+							<h4 class="advantage__title">Возврат товара</h4>
+							<div class="advantage__text">Если товары были испорчены</div>
+						</li>
+						<li class="advantage__item advantage__item--support">
+							<h4 class="advantage__title">Поддержка 24/7</h4>
+							<div class="advantage__text">Лучшие операторы</div>
+						</li>
+					</ul>
+
+				</div>
+			</div>
 		</section>
+
+
 	</main>
 
 	<footer class="footer">
@@ -175,7 +215,7 @@
 					<div class="footer-body__form-wrap">
 						<input class="footer-body__field" type="email" name="email"
 							id="email" placeholder="email@email.com" required>
-						<button class="form-btn footer-body__btn" type="submit">
+						<button class="footer-body__btn" type="submit">
 							Подписаться
 						</button>
 					</div>
@@ -275,17 +315,21 @@
 					</ul>
 				</div>
 			</div>
+		</div>
 
-			<div class="footer-bottom">
-				<div class="footer-bottom__copy">© 2021 Фрешок</div>
-				<ul class="footer-bottom__payments">
-					<li class="footer-bottom__payments-visa"
-						style="background-image: url(images/icons/visa.svg);">
-					</li>
-					<li class="footer-bottom__payments-mastercard"
-						style="background-image: url(images/icons/mastercard.svg);">
-					</li>
-				</ul>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="footer-bottom__wrap">
+					<div class="footer-bottom__copy">© 2021 Фрешок</div>
+					<ul class="footer-bottom__payments">
+						<li class="footer-bottom__payments-visa"
+							style="background-image: url(images/icons/visa.svg);">
+						</li>
+						<li class="footer-bottom__payments-mastercard"
+							style="background-image: url(images/icons/mastercard.svg);">
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>

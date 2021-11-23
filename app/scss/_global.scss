@@ -18,27 +18,9 @@ body {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1290px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.btn {
-  padding: 12px 24px;
-  @extend %open-sans-400;
-  font-size: 18px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  background-color: $green;
-  border-radius: 6px;
-  color: $white;
-}
-
-.form-btn {
-  width: 100%;
-  border-radius: 0 6px 6px 0;
-  color: $white;
-  text-transform: uppercase;
 }
 
 .sr-only {
@@ -52,4 +34,34 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  font-size: 0;
+}
+
+.slick-prev {
+  top: 50%;
+  left: 60px;
+  background-image: url('../images/icons/icon-arrow-left.svg');
+}
+
+.slick-next {
+  top: 50%;
+  right: 60px;
+  background-image: url('../images/icons/icon-arrow-right.svg');
+
+}
+
+.slick-prev,
+.slick-next {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
 }
