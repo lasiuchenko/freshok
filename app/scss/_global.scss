@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  max-width: 1290px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -41,21 +41,25 @@ body {
   font-size: 0;
 }
 
-.slick-prev {
-  top: 50%;
-  left: 60px;
-  background-image: url('../images/icons/icon-arrow-left.svg');
+.slick-prev img {
+  display: inline-block;
+}
+
+.slick-next img {
+  display: inline-block;
 }
 
 .slick-next {
-  top: 50%;
   right: 60px;
-  background-image: url('../images/icons/icon-arrow-right.svg');
+}
 
+.slick-prev {
+  left: 60px;
 }
 
 .slick-prev,
 .slick-next {
+  top: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   width: 60px;
@@ -65,6 +69,7 @@ body {
   background-position: center;
   z-index: 1;
 }
+
 
 .title {
   margin-bottom: 30px;

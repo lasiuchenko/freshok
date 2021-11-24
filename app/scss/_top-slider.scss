@@ -1,6 +1,10 @@
 .top-slider {
   min-height: 600px;
 
+  &__list {
+    display: block;
+  }
+
   &__list-wrap {
     background-repeat: no-repeat;
     background-size: cover;
