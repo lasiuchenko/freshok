@@ -65,3 +65,29 @@ body {
   background-position: center;
   z-index: 1;
 }
+
+.title {
+  margin-bottom: 30px;
+  @extend %ruda-500;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    @extend %open-sans-700;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
