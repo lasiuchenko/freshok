@@ -75,17 +75,18 @@
 .social {
   display: flex;
 
-  &__icon:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 12px;
   }
 
   &__link {
     display: block;
+    height: 32px;
+  }
+
+  &__link-icon {
     width: 32px;
     height: 32px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
   }
 }
 

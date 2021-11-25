@@ -14,6 +14,20 @@
     background-color: transparent;
     border: 1px solid $green;
     color: $green;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+  }
+
+  &__btn:focus {
+    box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+  }
+
+  &__btn:hover {
+    background-color: $ultra-light-green;
+  }
+
+  &__btn:active {
+    color: rgba(99, 166, 14, 0.5);
+    box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -29,6 +43,11 @@
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   text-align: start;
+  transition: border-radius 0.5s;
+
+  &:hover {
+    border: 1px solid $green;
+  }
 
   &__bedge {
     position: absolute;
@@ -67,7 +86,6 @@
     background-color: $orange;
     max-width: 34px;
     width: 100%;
-
   }
 
   &__img {
@@ -114,24 +132,42 @@
     position: absolute;
     bottom: 18px;
     right: 18px;
-    padding: 16px;
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     border-radius: 3px;
     background-color: $green;
-    background-repeat: no-repeat;
-    background-size: inherit;
-    background-position: center;
+  }
+
+  &__btn-icon {
+    margin: auto;
+    display: block;
+    width: 16px;
+    height: 16px;
   }
 
   &__btn-heart {
     position: absolute;
     top: 17px;
     right: 12px;
+  }
+
+  &__btn-heart-icon {
+    fill: $dark-silver;
     width: 32px;
     height: 28px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
+  }
+
+  &__btn-heart-icon:focus {
+    box-shadow: 0 0 0 3px $light-green;
+    border-radius: 3px;
+  }
+
+  &__btn-heart-icon:hover {
+    fill: $orange;
+  }
+
+  &__btn-heart-icon:active {
+    opacity: 0.5;
   }
 }

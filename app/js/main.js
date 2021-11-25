@@ -11,14 +11,6 @@ $(function () {
     );
 
 
-    $('.accordeon').on('click', function () {
-        $('.catalog__list').toggleClass('catalog__list--active');
-        $('.catalog').toggleClass('catalog--active');
-        $('.accordeon').toggleClass('accordeon--active');
-      }
-
-    );
-
     var mixer=mixitup('.products__content');
   }
 
