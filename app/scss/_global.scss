@@ -18,27 +18,9 @@ body {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.btn {
-  padding: 12px 24px;
-  @extend %open-sans-400;
-  font-size: 18px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  background-color: $green;
-  border-radius: 6px;
-  color: $white;
-}
-
-.form-btn {
-  width: 100%;
-  border-radius: 0 6px 6px 0;
-  color: $white;
-  text-transform: uppercase;
 }
 
 .sr-only {
@@ -52,4 +34,179 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  font-size: 0;
+}
+
+.slick-prev {
+  left: 60px;
+  width: 18px;
+  height: 32px;
+  display: inline-block;
+  background-image: url('../images/sprite.svg#icon-arrow-left');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  fill: $default;
+}
+
+.slick-next {
+  right: 60px;
+  width: 18px;
+  height: 32px;
+  display: inline-block;
+  background-image: url('../images/sprite.svg#icon-arrow-right');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  fill: $default; // при увеличении ширины экрана, кнопки улетают вод рамку экрана, элемент относительно которого позиционируется не имеет контейнера, который ограничивает ширины
+}
+
+.slick-prev,
+.slick-next {
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  transition: box-shadow 0.5s, fill 0.5s, background-color 0.5s;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+  box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: $light-green;
+  // не смог разобраться как покрасить изрбражение в бекграунде
+}
+
+.slick-prev:active,
+.slick-next:active {
+  fill: $light-green; // не смог разобраться как покрасить изрбражение в бекграунде
+}
+
+.icon {
+  transition: fill 0.5s;
+  fill: $white;
+}
+
+.title {
+  margin-bottom: 30px;
+  @extend %ruda-500;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    @extend %open-sans-700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: color 0.5s, box-shadow 0.5s;
+  }
+
+  &__link:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $light-green;
+  }
+
+  &__link:hover {
+    color: #4D800C;
+    border-bottom: 2px solid #4D800C;
+  }
+
+  &__link:active {
+    border-bottom: 2px solid $light-green;
+    box-shadow: 0 0 0 3px transparent;
+  }
+
+  &__link.mixitup-control-active {
+    border-bottom: 2px solid $green;
+    color: $green;
+  }
+}
+
+.status {
+  transition: opacity 0.5s, box-shadow 0.5s;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $light-green;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: $light-green;
+  }
+
+  &:active .icon {
+    fill: $light-green;
+  }
+}
+
+.user-status {
+  transition: opacity 0.5s, box-shadow 0.5s, background-color 0.5s;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $light-green;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+  }
+}
+
+.btn-status {
+  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px $light-green;
+  }
+
+  &:hover {
+    background-color: #4D800C;
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active .icon {
+    opacity: 0.5;
+  }
 }

@@ -21,6 +21,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 14px 0;
 
   @extend %open-sans-700;
@@ -35,38 +36,21 @@
     justify-content: space-between;
   }
 
-  &__contact-item {
-    margin: auto 0;
+  &__contact-item:not(:last-child) {
+    margin-right: 48px;
   }
 
-  &__contact-item {
-    position: relative;
-    padding-left: 34px;
+  &__contact-link {
+    display: flex;
+    align-items: center;
   }
 
-  &__contact-item::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: 0;
+  &__contact-link-icon {
+    margin-right: 12px;
     width: 32px;
     height: 22px;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
-  &__contact-item--del {
-    margin-right: 48px;
-    padding-left: 44px;
-  }
-
-  &__contact-item--del::before {
-    background-image: url("../images/icons/icon-del.svg");
-  }
-
-  &__contact-item--tel::before {
-    background-image: url("../images/icons/icon-tel.svg");
-  }
 
   &__info {
     display: flex;
@@ -98,9 +82,27 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: border-radius 0.3s, background-color 0.5s, transform 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-green;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &:hover .catalog__list {
+    transform: scaleY(1);
+  }
+
+  &:hover .catalog::after {
+    transform: rotate(180deg);
+  }
 }
 
+
+
 .catalog {
+
   &::before {
     content: "";
     position: absolute;
@@ -121,12 +123,52 @@
     height: 4px;
     transform: translateY(0);
     background-image: url('../images/icons/icon-arrow.svg');
+    transition: transform 0.5s;
   }
 
   &__list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    width: 180px;
     width: 100%;
-    display: none;
     height: 600px;
+    background-color: $white;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform 0.9s;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    font-size: 16px;
+    line-height: 1.2;
+    color: $black;
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    color: $green;
+    border-left: 3px solid $green;
+  }
+
+  &__item:active {
+    color: $dark-silver;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 24px;
+    outline: 0;
+    transition: box-shadow 0.5s;
+  }
+
+  &__link:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $light-green;
   }
 }
 
@@ -144,9 +186,9 @@
     left: 12px;
     width: 20px;
     height: 20px;
-    background-image: url("../images/icons/icon-search.svg");
+    background-image: url("../images/sprite.svg#icon-search"); // не смог разобраться как покрасить изрбражение в бекграунде
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
   }
 
@@ -163,46 +205,58 @@
   }
 
   &__btn {
+    @extend %form-btn;
     max-width: 157px;
     padding: 15px 52px;
     background-color: $dark-green;
     @extend %open-sans-600;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
   }
 
+  &__btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+
+  &__btn:hover {
+    background-color: rgba(49, 53, 43, 0.85);
+  }
+
+
+  &__btn:active {
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .user-nav {
   display: flex;
   justify-content: space-between;
 
+
   &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
-    width: 32px;
-    height: 32px;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   &__link:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 10px;
   }
 
-  &__link--user {
-    background-image: url('../images/icons/icon-user.svg');
-  }
-
-  &__link--heart {
-    background-image: url('../images/icons/icon-heart.svg');
-  }
-
-  &__link--cart {
-    background-image: url('../images/icons/icon-cart.svg');
+  &__link-icon {
+    width: 32px;
+    height: 28px;
   }
 
   &__num {
     position: absolute;
-    top: -7px;
-    left: -7px;
+    top: 2px;
+    left: 2px;
     width: 18px;
     height: 18px;
     border-radius: 50%;

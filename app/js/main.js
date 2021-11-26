@@ -1,16 +1,17 @@
 $(function () {
-	$('.hero__item').slick({
+    $('.top-slider__list').slick( {
         dots: false,
         infinite: false,
-				slidesToShow: 1,
-    });
+        slidesToShow: 1,
+        // prevArrow: '<button type="button" class="slick-prev"></button>',
+        // nextArrow: '<button type="button" class="slick-next"><img src="images/icons/icon-arrow-right.svg" alt="Правая стрелка"></button>'
+
+      }
+
+    );
 
 
-	$(document).ready(function() {
-		$('.catalog').on('click', function () {
-			$(this).next().slideToggle(2000);
-		});
-	})
+    var mixer=mixitup('.products__content');
+  }
 
-	
-})
+)
