@@ -41,20 +41,28 @@ body {
   font-size: 0;
 }
 
-.slick-prev img {
+.slick-prev {
+  left: 60px;
+  width: 18px;
+  height: 32px;
   display: inline-block;
-}
-
-.slick-next img {
-  display: inline-block;
+  background-image: url('../images/sprite.svg#icon-arrow-left');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  fill: $default;
 }
 
 .slick-next {
   right: 60px;
-}
-
-.slick-prev {
-  left: 60px;
+  width: 18px;
+  height: 32px;
+  display: inline-block;
+  background-image: url('../images/sprite.svg#icon-arrow-right');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  fill: $default; // при увеличении ширины экрана, кнопки улетают вод рамку экрана, элемент относительно которого позиционируется не имеет контейнера, который ограничивает ширины
 }
 
 .slick-prev,
@@ -68,6 +76,23 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
+  transition: box-shadow 0.5s, fill 0.5s, background-color 0.5s;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+  box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: $light-green;
+  // не смог разобраться как покрасить изрбражение в бекграунде
+}
+
+.slick-prev:active,
+.slick-next:active {
+  fill: $light-green; // не смог разобраться как покрасить изрбражение в бекграунде
 }
 
 .icon {
@@ -103,7 +128,7 @@ body {
   }
 
   &__link:focus {
-    outline: none;
+    outline: 0;
     box-shadow: 0 0 0 3px $light-green;
   }
 
@@ -169,6 +194,7 @@ body {
   transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
 
   &:focus {
+    outline: 0;
     box-shadow: 0 0 0 4px $light-green;
   }
 

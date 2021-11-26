@@ -18,6 +18,7 @@
   }
 
   &__btn:focus {
+    outline: 0;
     box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
   }
 
@@ -47,6 +48,32 @@
 
   &:hover {
     border: 1px solid $green;
+  }
+
+  &:hover .product__popup {
+    opacity: 1;
+  }
+
+  &__popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $white;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &__popup-icon {
+    width: 20px;
+    height: 20px;
+    fill: $green;
   }
 
   &__bedge {
@@ -159,6 +186,7 @@
   }
 
   &__btn-heart-icon:focus {
+    outline: 0;
     box-shadow: 0 0 0 3px $light-green;
     border-radius: 3px;
   }
