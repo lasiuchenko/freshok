@@ -9,8 +9,10 @@ $(function () {
       }
 
     );
-
-
+    $(".star").rateYo({
+      readOnly: true,
+    });
+ 
     var mixer=mixitup('.products__content');
   }
 
