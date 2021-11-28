@@ -12,23 +12,23 @@
   &__btn {
     @extend %btn;
     background-color: transparent;
-    border: 1px solid $green;
-    color: $green;
+    border: 1px solid $green-900;
+    color: $green-900;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
   }
 
   &__btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    box-shadow: 0 0 0 4px rgba($green-900, 0.5);
   }
 
   &__btn:hover {
-    background-color: $ultra-light-green;
+    background-color: $green-200;
   }
 
   &__btn:active {
     color: rgba(99, 166, 14, 0.5);
-    box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 10px 4px rgba($black, 0.1);
   }
 }
 
@@ -41,13 +41,13 @@
   width: 100%;
   height: 409px;
   padding: 57px 1px 18px;
-  border: 1px solid rgba(17, 17, 17, 0.2);
+  border: 1px solid rgba($dark-900, 0.2);
   border-radius: 6px;
   text-align: start;
   transition: border-radius 0.5s;
 
   &:hover {
-    border: 1px solid $green;
+    border: 1px solid $green-900;
   }
 
   &:hover .product__popup {
@@ -73,7 +73,7 @@
   &__popup-icon {
     width: 20px;
     height: 20px;
-    fill: $green;
+    fill: $green-900;
   }
 
   &__bedge {
@@ -99,18 +99,18 @@
   &__bedge-new {
     max-width: 66px;
     width: 100%;
-    background-color: $green;
+    background-color: $green-900;
     margin-bottom: 9px;
   }
 
   &__bedge-red {
-    background-color: $red;
+    background-color: $red-900;
     max-width: 37px;
     width: 100%;
   }
 
   &__bedge-hit {
-    background-color: $orange;
+    background-color: $orange-900;
     max-width: 34px;
     width: 100%;
   }
@@ -128,7 +128,7 @@
     padding: 0 18px;
     margin-bottom: 10px;
     font-weight: 600;
-    color: $dark;
+    color: $dark-900;
   }
 
   &__price {
@@ -142,13 +142,13 @@
     position: relative;
     display: block;
     margin-bottom: 2px;
-    color: $dark-silver;
+    color: $silver-600;
   }
 
   &__price--crossed::before {
     content: "";
     position: absolute;
-    border-bottom: 1px solid $dark-silver;
+    border-bottom: 1px solid $silver-600;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -162,7 +162,7 @@
     width: 32px;
     height: 32px;
     border-radius: 3px;
-    background-color: $green;
+    background-color: $green-900;
   }
 
   &__btn-icon {
@@ -179,7 +179,7 @@
   }
 
   &__btn-heart-icon {
-    fill: $dark-silver;
+    fill: $silver-600;
     width: 32px;
     height: 28px;
     transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
@@ -187,12 +187,12 @@
 
   &__btn-heart-icon:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px $light-green;
+    box-shadow: 0 0 0 3px $green-200;
     border-radius: 3px;
   }
 
   &__btn-heart-icon:hover {
-    fill: $orange;
+    fill: $orange-900;
   }
 
   &__btn-heart-icon:active {
