@@ -6,7 +6,9 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  @extend %open-sans-400;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.03em;
@@ -102,7 +104,8 @@ body {
 
 .title {
   margin-bottom: 30px;
-  @extend %ruda-500;
+  font-family: $ruda;
+  font-weight: 500;
   font-size: 32px;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -120,7 +123,7 @@ body {
   }
 
   &__link {
-    @extend %open-sans-700;
+    font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
     border-radius: 3px;

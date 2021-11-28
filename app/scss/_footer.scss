@@ -36,11 +36,11 @@
   }
 
   &__btn {
+    font-weight: 700;
     @extend %form-btn;
     max-width: 126px;
     padding: 12px 16px;
     background-color: $green;
-    @extend %open-sans-700;
     font-size: 12px;
     line-height: 1.3;
   }
