@@ -3,10 +3,14 @@
   text-align: center;
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 48px;
+  }
+
+  &__item {
+    width: calc((100% / 4) - 30px);
+    margin: 0 15px 30px;
   }
 
   &__btn {
@@ -32,7 +36,7 @@
   }
 }
 
-.product {
+.product-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -48,10 +52,10 @@
 
   &:hover {
     border: 1px solid $green-900;
-  }
 
-  &:hover .product__popup {
-    opacity: 1;
+    .product-card__popup {
+      opacity: 1;
+    }
   }
 
   &__popup {
@@ -116,12 +120,8 @@
   }
 
   &__img {
-    width: 296px;
-    height: 225px;
     margin-bottom: 18px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    object-fit: contain;
   }
 
   &__name {
