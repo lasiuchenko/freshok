@@ -84,7 +84,7 @@
 					</a>
 
 					<div class="finder">
-						<div class="accordeon">
+						<div class="accordion">
 							<div class="catalog ">Каталог продуктов</div>
 							<ul class="catalog__list">
 								<li class="catalog__item">
@@ -130,35 +130,26 @@
 							<label class="search__label" for="search"></label>
 							<div class="search__wrap">
 								<input class="search__field" id="search" name="search"
-									placeholder="Найти в магазине ..." type="search">
+									placeholder="Найти в магазине ..." type="search" required>
 								<button class="search__btn" type="submit">Поиск</button>
 							</div>
 						</form>
 					</div>
 
 					<div class="user-nav">
-						<a class="user-nav__link user-status" href=#>
-							<svg class="user-nav__link-icon" fill="#fff">
-								<use xlink:href="images/sprite.svg#icon-user"></use>
-							</svg>
-							<span class="sr-only">Открыть кабинет пользователя</span>
-						</a>
+						<button class="user-nav__link user-nav__link--user" href=#>
+							<span class=" sr-only">Открыть меню пользователя</span>
+						</button>
 
-						<a class="user-nav__link user-status" href="#">
-							<svg class="user-nav__link-icon" fill="#fff">
-								<use xlink:href="images/sprite.svg#icon-heart"></use>
-							</svg>
+						<button class="user-nav__link user-nav__link--heart" href="#">
 							<span class="user-nav__num">12</span>
-							<span class="sr-only">Открыть список любимых товаров</span>
-						</a>
+							<span class="sr-only">Открыть избранное</span>
+						</button>
 
-						<a class="user-nav__link user-status" href="#">
-							<svg class="user-nav__link-icon" fill="#fff">
-								<use xlink:href="images/sprite.svg#icon-cart"></use>
-							</svg>
+						<button class="user-nav__link user-nav__link--cart" href="#">
 							<span class="user-nav__num">12</span>
 							<span class="sr-only">Открыть корзину</span>
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -246,27 +237,26 @@
 					</div>
 				</div>
 			</ul>
-
-			<div class="advantage">
-				<div class="container">
-					<ul class="advantage__list">
-						<li class="advantage__item advantage__item--del">
-							<h4 class="advantage__title">Бесплатная доставка</h4>
-							<div class="advantage__text">Для заказов на сумму от 500 ₽</div>
-						</li>
-						<li class="advantage__item advantage__item--return">
-							<h4 class="advantage__title">Возврат товара</h4>
-							<div class="advantage__text">Если товары были испорчены</div>
-						</li>
-						<li class="advantage__item advantage__item--support">
-							<h4 class="advantage__title">Поддержка 24/7</h4>
-							<div class="advantage__text">Лучшие операторы</div>
-						</li>
-					</ul>
-
-				</div>
-			</div>
 		</section>
+
+		<div class="advantage">
+			<div class="container">
+				<ul class="advantage__list">
+					<li class="advantage__item advantage__item--del">
+						<h4 class="advantage__title">Бесплатная доставка</h4>
+						<div class="advantage__text">Для заказов на сумму от 500 ₽</div>
+					</li>
+					<li class="advantage__item advantage__item--return">
+						<h4 class="advantage__title">Возврат товара</h4>
+						<div class="advantage__text">Если товары были испорчены</div>
+					</li>
+					<li class="advantage__item advantage__item--support">
+						<h4 class="advantage__title">Поддержка 24/7</h4>
+						<div class="advantage__text">Лучшие операторы</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<section class="products">
 			<div class="container">
@@ -594,7 +584,7 @@
 							</a>
 						</li>
 						<li class="footer-body__item">
-							<a href="" class="footer-body__link" href=#$">
+							<a class="footer-body__link" href="#">
 								Публичная оферта
 							</a>
 						</li>

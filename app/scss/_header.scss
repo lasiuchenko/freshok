@@ -70,7 +70,7 @@
   color: $dark-800;
 }
 
-.accordeon {
+.accordion {
   position: relative;
   display: flex;
   max-width: 240px;
@@ -231,40 +231,75 @@
   display: flex;
   justify-content: space-between;
 
-
   &__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
     background-color: rgba($white, 0);
-    position: relative;
+    transition: opacity 0.5s, box-shadow 0.5s, background-color 0.5s;
+    border-radius: 3px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 31px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--user::after {
+      background-image: url("../images/icons/icon-user.svg");
+    }
+
+    &--heart::after {
+      background-image: url("../images/icons/icon-heart.svg");
+    }
+
+    &--cart::after {
+      background-image: url("../images/icons/icon-cart.svg");
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+      background-color: rgba($white, 0.1);
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.1);
+    }
+
+    &:active {
+      background-color: rgba($white, 0.1);
+      opacity: 0.7;
+    }
   }
 
   &__link:not(:last-child) {
     margin-right: 10px;
   }
 
-  &__link-icon {
-    width: 32px;
-    height: 28px;
-  }
-
   &__num {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+    padding: 4px;
+    border-radius: 9px;
     background-color: $white;
-
     font-weight: 600;
     text-align: center;
     font-size: 10px;
-    line-height: 1.8;
+    line-height: 1;
     letter-spacing: 0.03em;
     color: $red-900;
+    z-index: 1;
   }
 }
