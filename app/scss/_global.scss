@@ -97,6 +97,18 @@ body {
   fill: $green-200; // не смог разобраться как покрасить изрбражение в бекграунде
 }
 
+.buy-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  background-color: $green-900;
+  border-radius: 6px;
+  color: $white;
+}
+
 .icon {
   transition: fill 0.5s;
   fill: $white;

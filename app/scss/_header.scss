@@ -198,7 +198,10 @@
   }
 
   &__btn {
-    @extend %form-btn;
+    width: 100%;
+    border-radius: 0 6px 6px 0;
+    color: $white;
+    text-transform: uppercase;
     max-width: 157px;
     padding: 15px 52px;
     background-color: $dark-800;

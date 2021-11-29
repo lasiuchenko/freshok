@@ -14,8 +14,12 @@
   }
 
   &__btn {
-    @extend %btn;
-    background-color: transparent;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
     border: 1px solid $green-900;
     color: $green-900;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
