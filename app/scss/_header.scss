@@ -60,7 +60,7 @@
   }
 }
 
-.finder {
+.header__finder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@
 
   &__btn {
     position: relative;
-    padding: 12px 40px 12px 58px;
+    padding: 15px 40px 15px 58px;
     background-color: $white;
     border-radius: 6px;
 
@@ -168,28 +168,10 @@
   width: 100%;
   box-shadow: 0 0 0 rgba($green-900, 0.2);
 
-  &__input-wrap {
-    position: relative;
+  &__label {
+    display: flex;
     width: 100%;
-    transition: opacity 0.5s;
-
-    &:active .search-main__icon {
-      opacity: 0.5;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 13px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-  }
-
-  &__field {
-    width: 100%;
-    padding: 14px 50px;
+    padding: 13px 50px 13px 13px;
     border-radius: 6px 0 0 6px;
     transition: box-shadow 0.5s;
     font-weight: 400;
@@ -197,11 +179,21 @@
     line-height: 1.4;
     letter-spacing: 0.03em;
     color: $dark-800;
+    background-color: $white;
 
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 4px rgba($white, 0.5);
+    &:active .search-main__icon {
+      opacity: 0.5;
     }
+  }
+
+  &__icon {
+    margin-right: 19px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__field {
+    outline: 0;
   }
 
   &__btn {

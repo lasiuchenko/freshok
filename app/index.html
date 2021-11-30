@@ -84,7 +84,7 @@
 							<img class="logo__img" src="images/logo.svg" alt="Логотип"></s>
 						</a>
 
-						<div class="finder">
+						<div class="header__finder">
 							<div class="catalog">
 								<buttom class="catalog__btn">Каталог продуктов</buttom>
 								<ul class="catalog__list">
@@ -128,16 +128,13 @@
 							</div>
 
 							<form class="search-main" action="#" method="get">
-								<label class="search-main__label sr-only" for="search">
-									Искать в магазине
-								</label>
-								<div class="search-main__input-wrap">
+								<label class="search-main__label" for="search">
 									<svg class="search-main__icon">
 										<use xlink:href="images/sprite.svg#icon-search"></use>
 									</svg>
 									<input class="search-main__field" id="search" name="search"
 										placeholder="Найти в магазине ..." type="search" required>
-								</div>
+								</label>
 								<button class="search-main__btn" type="submit">Поиск</button>
 							</form>
 						</div>
