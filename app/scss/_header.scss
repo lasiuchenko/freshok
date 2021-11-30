@@ -1,29 +1,7 @@
-.header {
-  display: flex;
-  flex-direction: column;
-
-  &__top {
-    background-color: $dark-800;
-  }
-
-  &__bottom {
-    background-color: $green-900;
-  }
-
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
-  }
-}
-
 .menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-
+  width: 100%;
+  flex-direction: column;
   font-weight: 700;
   font-size: 13px;
   line-height: 1.3;
@@ -31,100 +9,113 @@
   color: $white;
   text-transform: uppercase;
 
-  &__contact {
-    display: flex;
-    justify-content: space-between;
+  &__top {
+    background-color: $dark-800;
   }
 
-  &__contact-item:not(:last-child) {
+  &__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+
+  &__bottom {
+    background-color: $green-900;
+  }
+
+  &__bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
     margin-right: 48px;
   }
 
-  &__contact-link {
+  &__link {
     display: flex;
     align-items: center;
   }
 
-  &__contact-link-icon {
+  &__icon {
     margin-right: 12px;
     width: 32px;
     height: 22px;
   }
+}
 
+.info {
+  display: flex;
+  justify-content: space-between;
 
-  &__info {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__info-item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 24px;
   }
 }
 
 .finder {
   display: flex;
+  justify-content: center;
   align-items: center;
   max-width: 845px;
   width: 100%;
   color: $dark-800;
 }
 
-.accordion {
-  position: relative;
+.catalog {
   display: flex;
+  flex-direction: column;
   max-width: 240px;
   width: 100%;
   margin-right: 30px;
-  padding: 15px 50px;
-  background-color: $white;
-  border-radius: 6px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  transition: border-radius 0.3s, background-color 0.5s, transform 0.5s;
-  cursor: pointer;
 
-  &:hover {
-    background-color: $green-200;
-    border-radius: 6px 6px 0 0;
-  }
+  &__btn {
+    position: relative;
+    padding: 12px 40px 12px 58px;
+    background-color: $white;
+    border-radius: 6px;
 
-  &:hover .catalog__list {
-    transform: scaleY(1);
-  }
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: $green-900;
+    text-transform: none;
 
-  &:hover .catalog::after {
-    transform: rotate(180deg);
-  }
-}
 
-.catalog {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 17px;
+      width: 25px;
+      height: 17px;
+      transform: translateY(-50%);
+      background-image: url('../images/icons/icon-nav.svg');
+    }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    width: 25px;
-    height: 17px;
-    transform: translateY(-50%);
-    background-image: url('../images/icons/icon-nav.svg');
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 28px;
-    width: 7px;
-    height: 4px;
-    transform: translateY(0);
-    background-image: url('../images/icons/icon-arrow.svg');
-    transition: transform 0.5s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 19px;
+      width: 7px;
+      height: 4px;
+      transform: translateY(0);
+      background-image: url('../images/icons/icon-arrow.svg');
+      transition: transform 0.5s;
+    }
   }
 
   &__list {
+    display: none;
     position: absolute;
     left: 0;
     top: 100%;
@@ -145,16 +136,15 @@
     line-height: 1.2;
     color: $black;
     transition: color 0.5s;
-    cursor: pointer;
-  }
 
-  &__item:hover {
-    color: $green-900;
-    border-left: 3px solid $green-900;
-  }
+    &:hover {
+      color: $green-900;
+      border-left: 3px solid $green-900;
+    }
 
-  &__item:active {
-    color: $silver-600;
+    &:active {
+      color: $silver-600;
+    }
   }
 
   &__link {
@@ -162,16 +152,15 @@
     padding: 15px 24px;
     outline: 0;
     transition: box-shadow 0.5s;
-  }
 
-  &__link:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px $green-200;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
   }
 }
 
-.search {
-  position: relative;
+.search-main {
   margin-right: 15px;
   display: flex;
   align-items: center;
@@ -179,22 +168,40 @@
   width: 100%;
   box-shadow: 0 0 0 rgba($green-900, 0.2);
 
-  &::before {
-    content: "";
+  &__input-wrap {
+    position: relative;
+    width: 100%;
+    transition: opacity 0.5s;
+
+    &:active .search-main__icon {
+      opacity: 0.5;
+    }
+  }
+
+  &__icon {
     position: absolute;
-    left: 12px;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url("../images/icons/icon-search.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 
   &__field {
     width: 100%;
     padding: 14px 50px;
     border-radius: 6px 0 0 6px;
+    transition: box-shadow 0.5s;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: $dark-800;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba($white, 0.5);
+    }
   }
 
   &__btn {
@@ -207,21 +214,20 @@
     background-color: $dark-800;
     font-weight: 600;
     transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
-  }
 
-  &__btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 4px rgba($white, 0.5);
-  }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba($white, 0.5);
+    }
 
-  &__btn:hover {
-    background-color: rgba($dark-800, 0.85);
-  }
+    &:hover {
+      background-color: rgba($dark-800, 0.85);
+    }
 
-
-  &__btn:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.25);
-    color: rgba($white, 0.5);
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+      color: rgba($white, 0.5);
+    }
   }
 }
 

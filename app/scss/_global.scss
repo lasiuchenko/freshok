@@ -38,6 +38,15 @@ body {
   overflow: hidden;
 }
 
+.logo {
+  width: 200px;
+  height: 60px;
+
+  &__img {
+    object-fit: contain;
+  }
+}
+
 .slick-arrow {
   position: absolute;
   font-size: 0;
