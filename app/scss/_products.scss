@@ -46,6 +46,10 @@
     .product-card__popup {
       opacity: 1;
     }
+
+    .product-card__background {
+      background-color: rgba($black, 0.1);
+    }
   }
 
   &__link {
@@ -60,6 +64,30 @@
     border: 1px solid rgba($dark-900, 0.2);
     border-radius: 6px;
     text-align: start;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-wrap {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0);
+    z-index: 1;
+    transition: background-color 0.5s;
   }
 
   &__popup {
@@ -84,16 +112,7 @@
     fill: $green-900;
   }
 
-  &__badges {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    display: flex;
-    flex-direction: column;
-  }
-
   &__img {
-    margin-bottom: 18px;
     object-fit: contain;
   }
 
