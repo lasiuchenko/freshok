@@ -44,10 +44,63 @@
     font-size: 16px;
     margin-bottom: 32px;
   }
-}
 
+  &__arrow-btn {
+    top: 50%;
+    background-color: rgba($white, 0.8);
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    transition: box-shadow 0.5s, fill 0.5s, background-color 0.5s;
+
+    &--prev {
+      left: 60px;
+    }
+
+    &--next {
+      right: 60px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($green-900, 0.5);
+    }
+
+    &:hover {
+      background-color: $green-200;
+
+      & .top-slider__arrow {
+        fill: $green-900;
+      }
+    }
+
+    &:active {
+      background-color: rgba($white, 0.8);
+
+      & .top-slider__arrow {
+        fill: $green-900;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 32px;
+    display: inline-block;
+    fill: $dark-500;
+    transition: fill 0.5s;
+  }
+}
 
 .buy-btn {
   display: inline-block;
   padding: 12px 24px;
+}
+
+.slick-arrow {
+  position: absolute;
+  font-size: 0;
 }
