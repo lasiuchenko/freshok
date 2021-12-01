@@ -89,30 +89,31 @@ body {
     text-transform: uppercase;
     border-radius: 3px;
     transition: color 0.5s, box-shadow 0.5s;
-  }
 
-  &__link:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px $green-200;
-  }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
 
-  &__link:hover {
-    color: $green-999;
-    border-bottom: 2px solid $green-999;
-  }
+    &:hover {
+      color: $green-999;
+      border-bottom: 2px solid $green-999;
+    }
 
-  &__link:active {
-    border-bottom: 2px solid $green-200;
-    box-shadow: 0 0 0 3px transparent;
-  }
+    &:active {
+      border-bottom: 2px solid $green-200;
+      box-shadow: 0 0 0 3px transparent;
+    }
 
-  &__link.mixitup-control-active {
-    border-bottom: 2px solid $green-900;
-    color: $green-900;
+    &.mixitup-control-active {
+      border-bottom: 2px solid $green-900;
+      color: $green-900;
+    }
   }
 }
 
 .badge {
+  display: inline-block;
   font-weight: 700;
   font-size: 10px;
   line-height: 1;
@@ -122,8 +123,6 @@ body {
   border-radius: 6px;
 
   &--new {
-    max-width: 66px;
-    width: 100%;
     background-color: $green-900;
     margin-bottom: 9px;
   }
@@ -136,8 +135,6 @@ body {
 
   &--hit {
     background-color: $orange-900;
-    max-width: 34px;
-    width: 100%;
   }
 }
 

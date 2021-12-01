@@ -33,11 +33,11 @@
     line-height: 1.3;
     font-size: 60px;
     text-transform: uppercase;
-  }
 
-  &__title--red {
-    display: block;
-    color: $red-900;
+    &--red {
+      display: block;
+      color: $red-900;
+    }
   }
 
   &__text {
@@ -103,4 +103,8 @@
 .slick-arrow {
   position: absolute;
   font-size: 0;
+}
+
+.slick-disabled .top-slider__arrow {
+  fill: $silver-600;
 }
