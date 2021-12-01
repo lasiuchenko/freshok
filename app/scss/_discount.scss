@@ -1,0 +1,9 @@
+.discounts {
+  padding: 72px 0;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

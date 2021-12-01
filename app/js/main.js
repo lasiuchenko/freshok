@@ -18,6 +18,18 @@ $(function () {
       readOnly: true,
     });
   
-    var mixer=mixitup('.products__content');
+  // var mixer = mixitup('.products__content');
+  
+  var mixerOne = mixitup('.products', {
+    controls: {
+        scope: 'local'
+    }
+});
+
+var mixerTwo = mixitup('.discounts', {
+    controls: {
+        scope: 'local'
+    }
+});
   }
 )

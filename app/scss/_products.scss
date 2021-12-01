@@ -47,7 +47,7 @@
       opacity: 1;
     }
 
-    .product-card__background {
+    .product-card__blackout {
       background-color: rgba($black, 0.1);
     }
   }
@@ -79,7 +79,7 @@
     margin-bottom: 18px;
   }
 
-  &__background {
+  &__blackout {
     position: absolute;
     top: 0;
     left: 0;
