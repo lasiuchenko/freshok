@@ -5,7 +5,7 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 48px;
+    padding-bottom: 20px;
   }
 
   &__item {
@@ -47,7 +47,7 @@
       opacity: 1;
     }
 
-    .product-card__blackout {
+    .product-card__link::before {
       background-color: rgba($black, 0.1);
     }
   }
@@ -64,6 +64,19 @@
     border: 1px solid rgba($dark-900, 0.2);
     border-radius: 6px;
     text-align: start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 57px;
+      left: 0;
+      width: 100%;
+      max-height: 215px;
+      height: 100%;
+      background-color: rgba($black, 0);
+      z-index: 1;
+      transition: background-color 0.5s;
+    }
   }
 
   &__badges {
@@ -77,17 +90,6 @@
   &__image-wrap {
     position: relative;
     margin-bottom: 18px;
-  }
-
-  &__blackout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($black, 0);
-    z-index: 1;
-    transition: background-color 0.5s;
   }
 
   &__popup {
@@ -122,6 +124,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     color: $dark-900;
+    @include lineClamp(3);
   }
 }
 

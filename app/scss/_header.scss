@@ -87,6 +87,7 @@
     letter-spacing: 0.03em;
     color: $green-900;
     text-transform: none;
+    transition: background-color 0.5s;
 
     &::before {
       content: "";
@@ -107,7 +108,7 @@
       width: 7px;
       height: 4px;
       background-image: url('../images/icons/icon-arrow.svg');
-      transition: transform 0.5s, background-color 0.5s;
+      transition: transform 0.5s;
     }
 
     &--active {

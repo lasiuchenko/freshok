@@ -10,7 +10,7 @@ $(function () {
   
   $('.catalog__btn').on('click', function () {
     $('.catalog__btn').toggleClass('catalog__btn--active');
-     $('.catalog__list').toggle();
+     $('.catalog__list').slideToggle('3000');
   });
 
 
@@ -18,7 +18,7 @@ $(function () {
       readOnly: true,
       numStars: 1,
       starWidth: "16px",
-      normalFill: "$yellow-900",
+      normalFill: "#FFB800",
     });
   
     var mixerOne = mixitup('.products', {

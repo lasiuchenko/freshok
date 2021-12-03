@@ -5,6 +5,12 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    width: calc(25% - 30px);
+    margin: 0 15px 30px;
   }
 }
 
@@ -12,9 +18,12 @@
   &__link {
     position: relative;
     display: flex;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 124px;
     padding: 12px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
   }
 
   &__img {
@@ -30,14 +39,15 @@
     align-items: flex-start;
     width: 164px;
     height: 100px;
+    text-align: start;
   }
 
   &__name {
     font-weight: 600;
+    @include lineClamp(3);
   }
 
   &__bottom {
-    text-align: start;
     width: 100%;
     font-weight: 600;
     line-height: 1;
@@ -55,6 +65,14 @@
   font-size: 10px;
   color: $green-900;
   text-transform: uppercase;
+
+  &--end {
+    color: $red-900;
+  }
+
+  &--finish {
+    color: $silver-600;
+  }
 }
 
 .price-mini {
@@ -88,7 +106,6 @@
   align-items: center;
 
   &__num {
-    margin-right: 2px;
     font-weight: 700;
     color: $dark-500;
   }

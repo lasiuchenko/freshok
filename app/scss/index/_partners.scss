@@ -1,0 +1,20 @@
+.partners {
+  padding: 72px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 80px;
+    width: 100%;
+    margin: auto 0;
+    opacity: 0.5;
+
+    &:not(:last-child) {
+      margin-right: 140px;
+    }
+  }
+
+}

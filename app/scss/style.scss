@@ -2,6 +2,7 @@
 @import "fonts";
 @import "reset";
 @import "libs";
+@import "mixin";
 @import "global";
 @import "header";
 @import "app/scss/index/top-slider";
@@ -9,4 +10,6 @@
 @import "products";
 @import "app/scss/index/promo";
 @import "app/scss/index/discount";
+@import "app/scss/index/partners";
+@import "app/scss/index/news";
 @import "footer";

@@ -1,0 +1,120 @@
+.news {
+  padding: 0 0 72px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__btn {
+    padding-bottom: 2px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $green-900;
+    text-transform: uppercase;
+    border-bottom: 2px solid $green-900;
+    transition: box-shadow 0.5s, color 0.5s, border-bottom 0.5s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $green-999;
+      border-bottom: 2px solid $green-999;
+    }
+
+    &:active {
+      border-bottom: 2px solid $green-200;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    width: calc((100% / 3) - 30px);
+    height: 348px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+  }
+
+  &__date {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 76px;
+    border-radius: 0 0 4px 4px;
+    background-color: $white;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 14px;
+  }
+
+  &__month {
+    margin-bottom: 4px;
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &__background {
+    height: 240px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px 6px 0 0;
+
+    &--strawberry {
+      background-image: url("../../images/bg/news-bg/strawberry-bg.jpg");
+    }
+
+    &--mango {
+      background-image: url("../../images/bg/news-bg/mango-bg.jpg");
+    }
+
+    &--papaya {
+      background-image: url("../../images/bg/news-bg/papaya-bg.jpg");
+    }
+  }
+
+  &__text {
+    padding: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    @include lineClamp(3);
+  }
+}
