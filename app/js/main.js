@@ -14,22 +14,23 @@ $(function () {
   });
 
 
-    $(".star").rateYo({
+    $(".rate__star").rateYo({
       readOnly: true,
+      numStars: 1,
+      starWidth: "16px",
+      normalFill: "$yellow-900",
     });
   
-  // var mixer = mixitup('.products__content');
-  
-  var mixerOne = mixitup('.products', {
-    controls: {
+    var mixerOne = mixitup('.products', {
+        controls: {
         scope: 'local'
     }
-});
+    });
 
-var mixerTwo = mixitup('.discounts', {
-    controls: {
+    var mixerTwo = mixitup('.discounts', {
+        controls: {
         scope: 'local'
     }
-});
+    });
   }
 )
