@@ -3,55 +3,93 @@
   text-align: center;
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    padding-bottom: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    width: calc((100% / 4) - 30px);
+    margin: 0 15px 30px;
   }
 
   &__btn {
-    @extend %btn;
+    padding: 12px 24px;
+    color: $green-900;
     background-color: transparent;
-    border: 1px solid $green;
-    color: $green;
-    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-  }
+    border: 1px solid $green-900;
 
-  &__btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
-  }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba($green-900, 0.5);
+    }
 
-  &__btn:hover {
-    background-color: $ultra-light-green;
-  }
+    &:hover {
+      background-color: $green-200;
+    }
 
-  &__btn:active {
-    color: rgba(99, 166, 14, 0.5);
-    box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+    &:active {
+      color: rgba(99, 166, 14, 0.5);
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
+    }
   }
 }
 
-.product {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 300px;
-  width: 100%;
-  height: 409px;
-  padding: 57px 1px 18px;
-  border: 1px solid rgba(17, 17, 17, 0.2);
-  border-radius: 6px;
-  text-align: start;
+.product-card {
   transition: border-radius 0.5s;
 
   &:hover {
-    border: 1px solid $green;
+    .product-card__link {
+      border: 1px solid $green-900;
+    }
+
+    .product-card__popup {
+      opacity: 1;
+    }
+
+    .product-card__link::before {
+      background-color: rgba($black, 0.1);
+    }
   }
 
-  &:hover .product__popup {
-    opacity: 1;
+  &__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    width: 100%;
+    height: 409px;
+    padding: 57px 1px 18px;
+    border: 1px solid rgba($dark-900, 0.2);
+    border-radius: 6px;
+    text-align: start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 57px;
+      left: 0;
+      width: 100%;
+      max-height: 215px;
+      height: 100%;
+      background-color: rgba($black, 0);
+      z-index: 1;
+      transition: background-color 0.5s;
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-wrap {
+    position: relative;
+    margin-bottom: 18px;
   }
 
   &__popup {
@@ -68,134 +106,92 @@
     background-color: $white;
     opacity: 0;
     transition: opacity 0.5s;
+    z-index: 2;
   }
 
   &__popup-icon {
     width: 20px;
     height: 20px;
-    fill: $green;
-  }
-
-  &__bedge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__bedge-new,
-  &__bedge-red,
-  &__bedge-hit {
-    @extend %open-sans-700;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    color: $white;
-    padding: 3px 6px;
-    border-radius: 6px;
-  }
-
-  &__bedge-new {
-    max-width: 66px;
-    width: 100%;
-    background-color: $green;
-    margin-bottom: 9px;
-  }
-
-  &__bedge-red {
-    background-color: $red;
-    max-width: 37px;
-    width: 100%;
-  }
-
-  &__bedge-hit {
-    background-color: $orange;
-    max-width: 34px;
-    width: 100%;
+    fill: $green-900;
   }
 
   &__img {
-    width: 296px;
-    height: 225px;
-    margin-bottom: 18px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    object-fit: contain;
   }
 
   &__name {
     padding: 0 18px;
     margin-bottom: 10px;
-    @extend %open-sans-600;
-    color: $dark;
+    font-weight: 600;
+    color: $dark-900;
+    @include lineClamp(3);
   }
+}
 
-  &__price {
-    padding: 0 18px;
-    margin-top: auto;
-    line-height: 1;
-  }
+.btn-heart {
+  position: absolute;
+  top: 17px;
+  right: 12px;
 
-  &__price--crossed {
-    padding: 0;
-    position: relative;
-    display: block;
-    margin-bottom: 2px;
-    color: $dark-silver;
-  }
-
-  &__price--crossed::before {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid $dark-silver;
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    transform: rotate(-15deg);
-  }
-
-  &__btn {
-    position: absolute;
-    bottom: 18px;
-    right: 18px;
+  &__icon {
+    fill: $silver-600;
     width: 32px;
-    height: 32px;
-    border-radius: 3px;
-    background-color: $green;
-  }
+    height: 28px;
+    transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
 
-  &__btn-icon {
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      fill: $orange-900;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.btn-cart {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: $green-900;
+
+  &__icon {
     margin: auto;
     display: block;
     width: 16px;
     height: 16px;
   }
+}
 
-  &__btn-heart {
-    position: absolute;
-    top: 17px;
-    right: 12px;
-  }
+.price {
+  padding: 0 18px;
+  margin-top: auto;
+  line-height: 1;
 
-  &__btn-heart-icon {
-    fill: $dark-silver;
-    width: 32px;
-    height: 28px;
-    transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
-  }
+  &--crossed {
+    padding: 0;
+    position: relative;
+    display: block;
+    margin-bottom: 2px;
+    color: $silver-600;
 
-  &__btn-heart-icon:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px $light-green;
-    border-radius: 3px;
-  }
-
-  &__btn-heart-icon:hover {
-    fill: $orange;
-  }
-
-  &__btn-heart-icon:active {
-    opacity: 0.5;
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid $silver-600;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      transform: rotate(-15deg);
+    }
   }
 }

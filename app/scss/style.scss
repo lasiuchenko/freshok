@@ -2,12 +2,14 @@
 @import "fonts";
 @import "reset";
 @import "libs";
+@import "mixin";
 @import "global";
 @import "header";
-@import "top-slider";
+@import "app/scss/index/top-slider";
+@import "app/scss/index/advantage";
 @import "products";
+@import "app/scss/index/promo";
+@import "app/scss/index/discount";
+@import "app/scss/index/partners";
+@import "app/scss/index/news";
 @import "footer";
-
-
-
-@import "media";
