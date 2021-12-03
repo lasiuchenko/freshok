@@ -3,11 +3,10 @@
 @import "reset";
 @import "libs";
 @import "global";
-
 @import "header";
-@import "top-slider";
-@import "advantage";
+@import "app/scss/index/top-slider";
+@import "app/scss/index/advantage";
 @import "products";
-@import "promo";
-@import "discount";
+@import "app/scss/index/promo";
+@import "app/scss/index/discount";
 @import "footer";
