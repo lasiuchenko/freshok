@@ -156,10 +156,128 @@
 								<span class="user-nav__num">12</span>
 								<span class="sr-only">Открыть корзину</span>
 							</button>
+
+							<div class="cart-popup">
+								<div class="cart-popup__content">
+									<div class="cart-popup__head">
+										<div class="cart-popup__wrap">
+											<div class="cart-popup__title">Корзина</div>
+											<button class="cart-popup__btn" type="reset">
+												очистить корзину
+											</button>
+										</div>
+										<button class="close-btn">
+											<span class="close-btn__line"></span>
+											<span class="sr-only">закрыть корзину</span>
+										</button>
+									</div>
+
+									<ul class="cart-popup__list">
+										<li class="cart-popup__item" id="1">
+											<img class="cart-popup__img"
+												src="images/products/pineapple.png" alt="Ананас">
+
+											<div class="cart-popup__desc">
+												<h5 class="cart-popup__name">
+													Ананас, 1 кг
+												</h5>
+												<div class="cart-popup__price">
+													999<span class="cart-popup__currency">₽</span>
+												</div>
+											</div>
+
+											<form class="cart-popup__quantity" action="#">
+												<button class="minus-btn cart-popup__form-btn"
+													type="button" name="button">
+													<svg class="cart-popup__icon">
+														<use xlink:href="images/sprite.svg#icon-minus">
+														</use>
+													</svg>
+												</button>
+												<label class="sr-only" for="quantity">
+													Количество товара
+												</label>
+												<input class="cart-popup__input" type="text"
+													name="quantity" value="1">
+												<button class="plus-btn cart-popup__form-btn"
+													type="button" name="button">
+													<svg class="cart-popup__icon">
+														<use xlink:href="images/sprite.svg#icon-plus">
+														</use>
+													</svg>
+												</button>
+											</form>
+
+											<div class="cart-popup__price">
+												1998<span class="cart-popup__currency">₽</span>
+											</div>
+
+											<button class="cart-popup__close-btn" id="1">
+												<span class="cart-popup__line"></span>
+												<span class="sr-only">удалить товар</span>
+											</button>
+										</li>
+
+										<li class="cart-popup__item">
+											<img class="cart-popup__img"
+												src="images/products/dragon-fruit.png" alt="Ананас">
+
+											<div class="cart-popup__desc">
+												<h5 class="cart-popup__name">
+													Питахайя красная с белой мякотью, 1шт
+												</h5>
+												<div class="cart-popup__price">
+													1019<span class="cart-popup__currency">₽</span>
+												</div>
+											</div>
+
+											<form class="cart-popup__quantity" action="#">
+												<button class="minus-btn cart-popup__form-btn"
+													type="button" name="button">
+													<svg class="cart-popup__icon">
+														<use xlink:href="images/sprite.svg#icon-minus">
+														</use>
+													</svg>
+												</button>
+												<label class="sr-only" for="quantity">
+													Количество товара
+												</label>
+												<input class="cart-popup__input" type="text"
+													name="quantity" value="2">
+												<button class="plus-btn cart-popup__form-btn"
+													type="button" name="button">
+													<svg class="cart-popup__icon">
+														<use xlink:href="images/sprite.svg#icon-plus">
+														</use>
+													</svg>
+												</button>
+											</form>
+
+											<div class="cart-popup__price">
+												2038<span class="cart-popup__currency">₽</span>
+											</div>
+
+											<button class="cart-popup__close-btn" id="2">
+												<span class="cart-popup__line"></span>
+												<span class="sr-only">удалить товар</span>
+											</button>
+										</li>
+									</ul>
+
+									<div class="cart-popup__sum">
+										<div class="cart-popup__text">Товаров на сумму</div>
+										<div class="cart-popup__total">
+											2038<span class="cart-popup__currency">₽</span>
+										</div>
+									</div>
+									<button class="cart-popup__submit-btn" type="submit">
+										Оформить заказ
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 		</nav>
 	</header>
 
@@ -1060,7 +1178,7 @@
 					<ul class="footer__list">
 						<li class="footer__item">
 							<a class="footer__link status" href="#">
-								<!-- не понял как сделать через псевдоэлемент ширины -->
+								<!-- не понял как сделать через псевдоэлемент высоту для -->
 								О нас
 							</a>
 						</li>
