@@ -6,7 +6,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -39,11 +39,12 @@ body {
 }
 
 .logo {
-  width: 200px;
-  height: 60px;
 
   &__img {
-    object-fit: contain;
+    object-fit: cover;
+
+    width: 200px;
+    height: 60px;
   }
 }
 
@@ -88,22 +89,6 @@ body {
     font-size: 15px;
     text-transform: uppercase;
     border-radius: 3px;
-    transition: color 0.5s, box-shadow 0.5s;
-
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 3px $green-200;
-    }
-
-    &:hover {
-      color: $green-999;
-      border-bottom: 2px solid $green-999;
-    }
-
-    &:active {
-      border-bottom: 2px solid $green-200;
-      box-shadow: 0 0 0 3px transparent;
-    }
 
     &.mixitup-control-active {
       border-bottom: 2px solid $green-900;
@@ -178,5 +163,23 @@ body {
 
   &:active .icon {
     opacity: 0.5;
+  }
+}
+
+.filter-status {
+  transition: color 0.5s, box-shadow 0.5s;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $green-200;
+  }
+
+  &:hover {
+    color: $green-999;
+    border-bottom: 2px solid $green-999;
+  }
+
+  &:active {
+    border-bottom: 2px solid $green-200;
   }
 }

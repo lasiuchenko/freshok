@@ -46,4 +46,8 @@
     line-height: 1.3;
     color: $dark-900;
   }
+
+  &__text {
+    @include lineClamp(3);
+  }
 }

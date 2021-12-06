@@ -34,6 +34,12 @@
     width: 100%;
     padding: 12px;
     border-radius: 6px 0 0 6px;
+    transition: box-shadow 0.5s;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
   }
 
   &__btn {
