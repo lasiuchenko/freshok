@@ -196,25 +196,15 @@
       box-shadow: 0 0 0 3px $green-200;
     }
 
-  
-
-      // &::before {
-      //   position: absolute;
-      //   content: "";
-      //   width: 20px;
-      //   height: 20px;
-      //   top: 0;
-      //   left: 0;
-      //   background-image: url("../images/sprite.svg#icon-search");
-      //   background-position: center;
-      //   background-repeat: no-repeat;
-      //   background-size: contain;
-      // }
-    
+    &:active {
+      .search-main__btn::before {
+        opacity: 0.1;
+      }
+    }
   }
 
-
   &__btn {
+    position: relative;
     width: 100%;
     border-radius: 0 6px 6px 0;
     color: $white;
@@ -224,6 +214,21 @@
     background-color: $dark-800;
     font-weight: 600;
     transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: -390px;
+      transform: translateY(-50%);
+      background-image: url("../images/sprite.svg#icon-search");
+      opacity: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
     &:focus {
       outline: 0;
