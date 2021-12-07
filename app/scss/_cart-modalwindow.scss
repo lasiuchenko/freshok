@@ -1,0 +1,223 @@
+.cart-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($black, 0.15);
+  z-index: 100;
+  color: $black;
+
+  &__content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 474px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: none;
+  }
+
+  &__head {
+    padding: 19px 24px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    font-size: 14px;
+  }
+
+  &__list {
+    height: 100%;
+    padding: 12px;
+    background-color: $silver-100;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 12px;
+    width: 100%;
+    max-width: 452px;
+    height: 84px;
+    margin-bottom: 12px;
+    background: $white;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__line,
+  &__line::after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $silver-600;
+  }
+
+  &__line {
+    transform: translate(-50%, 0) rotate(-45deg);
+
+    &::after {
+      top: 0;
+      transform: translate(-50%, 0) rotate(90deg);
+    }
+  }
+
+  &__img {
+    margin-right: 32px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+  }
+
+  &__desc {
+    margin-right: 12px;
+    width: 100%;
+    max-width: 170px;
+    font-weight: 600;
+    align-self: center;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: 1;
+    color: $dark-500;
+  }
+
+  &__quantity {
+    display: flex;
+    margin-right: 12px;
+    width: 84px;
+    height: 24px;
+  }
+
+  &__input {
+    width: 36px;
+    font-size: 16px;
+    line-height: 1;
+    color: $dark-500;
+    background-color: $green-200;
+    text-align: center;
+  }
+
+  &__form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: $green-900;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 100%;
+    fill: $white;
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  &__total {
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+
+  &__currency {
+    font-size: 15px;
+  }
+
+  &__submit-btn {
+    margin-top: auto;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $white;
+    padding: 22px;
+    background-color: $green-900;
+  }
+}
+
+.close-btn {
+  position: relative;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+
+  &__line,
+  &__line::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $dark-800;
+  }
+
+  &__line {
+    transform: translate(-50%, 0) rotate(-45deg);
+
+    &::after {
+      top: 50%;
+      transform: translate(-50%, 0) rotate(90deg);
+    }
+  }
+}
+
+.close {
+  border-radius: 3px;
+  transition: color 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+  &:focus {
+    box-shadow: 0 0 0 3px $green-200;
+  }
+
+  &:hover {
+    background-color: $green-200;
+    color: $green-900;
+  }
+
+  &:active {
+    background-color: rgba($silver-600, 0.3);
+  }
+}
