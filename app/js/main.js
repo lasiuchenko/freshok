@@ -8,11 +8,11 @@ $(function () {
   });
 
   $('.partners__list').slick({
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4, 
-    slidesToScroll: 4
+    slidesToShow: 6, 
+    slidesToScroll: 1
   });
   
   $('.catalog__btn').on('click', function () {
@@ -20,11 +20,11 @@ $(function () {
     $('.catalog__list').slideToggle('3000');
   });
 
-  $('.user-nav__link--cart, .close-btn').on('click', function () {
+  $('.user-nav__link--cart, .burger-btn--close').on('click', function () {
     $('.cart-popup').slideToggle('3000');
   });
 
-  $('.cart-popup__close-btn').on('click', function () {
+  $('.burger-btn--mini').on('click', function () {
      let parent = $(this).parent();
   parent.hide();
   });

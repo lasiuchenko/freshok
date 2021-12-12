@@ -51,40 +51,10 @@
     padding: 10px 12px;
     width: 100%;
     max-width: 452px;
-    height: 84px;
     margin-bottom: 12px;
     background: $white;
     border: 1px solid $silver-600;
     border-radius: 3px;
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 24px;
-    height: 24px;
-  }
-
-  &__line,
-  &__line::after {
-    content: "";
-    width: 12px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $silver-600;
-  }
-
-  &__line {
-    transform: translate(-50%, 0) rotate(-45deg);
-
-    &::after {
-      top: 0;
-      transform: translate(-50%, 0) rotate(90deg);
-    }
   }
 
   &__img {
@@ -106,6 +76,7 @@
     margin-bottom: 5px;
     font-size: 14px;
     line-height: 1.4;
+    @include lineClamp(2);
   }
 
   &__price {
@@ -128,6 +99,11 @@
     color: $dark-500;
     background-color: $green-200;
     text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
   }
 
   &__form-btn {
@@ -172,35 +148,6 @@
     color: $white;
     padding: 22px;
     background-color: $green-900;
-  }
-}
-
-.close-btn {
-  position: relative;
-  display: flex;
-  width: 44px;
-  height: 44px;
-  overflow: hidden;
-
-  &__line,
-  &__line::after {
-    content: "";
-    width: 30px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $dark-800;
-  }
-
-  &__line {
-    transform: translate(-50%, 0) rotate(-45deg);
-
-    &::after {
-      top: 50%;
-      transform: translate(-50%, 0) rotate(90deg);
-    }
   }
 }
 

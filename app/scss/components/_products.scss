@@ -12,35 +12,6 @@
     width: calc((100% / 4) - 30px);
     margin: 0 15px 30px;
   }
-
-  &__btn {
-    padding: 12px 24px;
-    color: $green-900;
-    background-color: transparent;
-    border: 1px solid $green-900;
-
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 4px rgba($green-900, 0.5);
-    }
-
-    &:hover {
-      background-color: $green-200;
-    }
-
-    &:active {
-      color: rgba(99, 166, 14, 0.5);
-      box-shadow: inset 0 10px 4px rgba($black, 0.1);
-    }
-  }
-}
-
-.product-status {
-  transition: border 0.5s;
-
-  &:hover {
-    border: 1px solid $green-900;
-  }
 }
 
 .product-card {
@@ -52,7 +23,6 @@
   width: 100%;
   height: 409px;
   padding: 57px 1px 18px;
-  border: 1px solid rgba($dark-900, 0.2);
   border-radius: 6px;
   text-align: start;
 
@@ -136,52 +106,56 @@
   position: absolute;
   top: 17px;
   right: 12px;
+  display: flex;
+  transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px $green-200;
+    border-radius: 3px;
+  }
+
+  &:hover .btn-heart__icon {
+    fill: $orange-900;
+  }
+
+  &:active .btn-heart__icon {
+    opacity: 0.5;
+  }
 
   &__icon {
     fill: $silver-600;
     width: 32px;
     height: 28px;
-    transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
-
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 3px $green-200;
-      border-radius: 3px;
-    }
-
-    &:hover {
-      fill: $orange-900;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
-  }
-}
-
-.btn-cart {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  width: 32px;
-  height: 32px;
-  border-radius: 3px;
-  background-color: $green-900;
-
-  &__icon {
-    margin: auto;
-    display: block;
-    width: 16px;
-    height: 16px;
+    transition: fill 0.5s, opacity 0.5s;
   }
 }
 
 .price {
-  padding: 0 18px;
   margin-top: auto;
   line-height: 1;
+  padding: 0 18px;
 
-  &--crossed {
+  &--mini {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0;
+    margin-right: 4px;
+    max-width: 119px;
+    width: 100%;
+  }
+
+  &__new {
+    &--mini {
+      font-weight: 600;
+      margin-right: 12px;
+      font-size: 20px;
+      color: $dark-500;
+    }
+  }
+
+  &__old {
     padding: 0;
     position: relative;
     display: block;
@@ -197,5 +171,15 @@
       height: 50%;
       transform: rotate(-15deg);
     }
+
+    &--mini {
+      font-weight: 400;
+      font-size: 12px;
+      color: $silver-600;
+    }
+  }
+
+  &__currency {
+    font-size: 15px;
   }
 }

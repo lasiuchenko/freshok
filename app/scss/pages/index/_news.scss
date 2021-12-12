@@ -13,13 +13,32 @@
   }
 
   &__btn {
+    position: relative;
     padding-bottom: 2px;
     font-weight: 700;
     line-height: 1.2;
     color: $green-900;
     text-transform: uppercase;
-    border-bottom: 2px solid $green-900;
     border-radius: 3px;
+    transition: color 0.5s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $green-900;
+      transition: background-color 0.5s;
+    }
+
+    &:hover {
+      color: $green-999;
+
+      &::after {
+        background-color: $green-999;
+      }
+    }
   }
 
   &__content {
@@ -29,28 +48,26 @@
 
   &__item {
     position: relative;
-    width: calc((100% / 3) - 30px);
+    width: calc((100% / 3) - 20px);
     height: 348px;
     box-shadow: 0 3px 3px rgba($black, 0.25);
     border: 1px solid $silver-600;
     border-radius: 6px;
-    transition: color 0.5s;
 
     &:not(:last-child) {
       margin-right: 30px;
     }
+  }
 
-    &:hover {
-      color: $green-900;
-    }
+  &__card {
+    width: 100%;
+    height: 100%;
   }
 
   &__link {
-    width: 100%;
-    display: flex;
-    align-content: space-between;
-    flex-direction: column;
-    padding: 18px;
+    &:hover .news__subtitle {
+      color: $green-900;
+    }
   }
 
   &__date {
@@ -69,6 +86,7 @@
     font-size: 10px;
     letter-spacing: 0.1em;
     line-height: 14px;
+    text-transform: uppercase;
   }
 
   &__month {
@@ -81,31 +99,21 @@
     line-height: 30px;
   }
 
-  &__background {
+  &__img {
+    margin-bottom: 18px;
     height: 240px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     border-radius: 6px 6px 0 0;
-
-    &--strawberry {
-      background-image: url("../../images/bg/news-bg/strawberry-bg.jpg");
-    }
-
-    &--mango {
-      background-image: url("../../images/bg/news-bg/mango-bg.jpg");
-    }
-
-    &--papaya {
-      background-image: url("../../images/bg/news-bg/papaya-bg.jpg");
-    }
+    object-fit: cover;
   }
 
   &__subtitle {
+    padding: 0 18px;
     font-weight: 600;
     font-size: 15px;
     line-height: 1.5;
     @include lineClamp(3);
+
+    transition: color 0.5s;
   }
 }
