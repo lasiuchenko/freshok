@@ -1,0 +1,46 @@
+.filter-mix {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 47px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &--margin:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &.mixitup-control-active {
+      position: relative;
+      color: $green-900;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $green-200;
+      }
+    }
+  }
+}
