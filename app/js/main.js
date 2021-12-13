@@ -3,8 +3,16 @@ $(function () {
     dots: false,
     infinite: false,
     prevArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--prev"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--next"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></button>'
-
+    nextArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--next"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></button>',
+    responsive: [
+    {
+      breakpoint: 1286,
+      settings: {
+        arrows: false,
+        dots: true
+      }
+    }
+    ]
   });
 
   $('.partners__list').slick({

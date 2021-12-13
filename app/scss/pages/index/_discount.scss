@@ -6,6 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 18px;
+
+    @include max-w($xl) {
+      justify-content: center;
+    }
   }
 
   &__item {

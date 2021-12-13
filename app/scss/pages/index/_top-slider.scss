@@ -1,6 +1,10 @@
 .top-slider {
   height: 600px;
 
+  @include max-w($xl) {
+    height: 500px;
+  }
+
   &__item {
     position: relative;
     width: 100%;
@@ -8,6 +12,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include max-w($xl) {
+      min-height: 500px;
+    }
   }
 
   &__wrap {
@@ -102,8 +110,38 @@
 .slick-arrow {
   position: absolute;
   font-size: 0;
+
+  // @include max-w($xl) {
+  //   display: none;
+  // }
 }
 
 .slick-disabled .top-slider__arrow {
   fill: $silver-600;
+}
+
+.slick-dots {
+  @include max-w($xl) {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $white;
+      font-size: 0;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    .slick-active {
+      background-color: $green-900;
+    }
+  }
 }
