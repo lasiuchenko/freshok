@@ -6,7 +6,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -39,28 +39,21 @@ body {
 }
 
 .logo {
-  width: 200px;
-  height: 60px;
 
   &__img {
     object-fit: contain;
+    width: 200px;
+    height: 60px;
   }
 }
 
-.btn {
-  font-size: 18px;
-  font-weight: 400;
-  color: $white;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  border-radius: 6px;
-  background-color: $green-900;
-  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-}
+.product-status {
+  border: 1px solid rgba($dark-900, 0.2);
+  transition: border 0.5s;
 
-.icon {
-  transition: fill 0.5s;
-  fill: $white;
+  &:hover {
+    border: 1px solid $green-900;
+  }
 }
 
 .title {
@@ -74,44 +67,6 @@ body {
   color: $dark-900;
 }
 
-.filter-mix {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 51px;
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__link {
-    font-weight: 700;
-    font-size: 15px;
-    text-transform: uppercase;
-    border-radius: 3px;
-    transition: color 0.5s, box-shadow 0.5s;
-
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 3px $green-200;
-    }
-
-    &:hover {
-      color: $green-999;
-      border-bottom: 2px solid $green-999;
-    }
-
-    &:active {
-      border-bottom: 2px solid $green-200;
-      box-shadow: 0 0 0 3px transparent;
-    }
-
-    &.mixitup-control-active {
-      border-bottom: 2px solid $green-900;
-      color: $green-900;
-    }
-  }
-}
-
 .badge {
   display: inline-block;
   font-weight: 700;
@@ -121,6 +76,7 @@ body {
   color: $white;
   padding: 3px 6px;
   border-radius: 6px;
+  text-transform: uppercase;
 
   &--new {
     background-color: $green-900;
@@ -138,8 +94,13 @@ body {
   }
 }
 
+.icon {
+  transition: fill 0.5s, opascity 0.5s;
+  fill: $white;
+}
+
 .status {
-  transition: opacity 0.5s, box-shadow 0.5s;
+  transition: opacity 0.5s, box-shadow 0.5s, color 0.5s;
   border-radius: 3px;
 
   &:focus {
@@ -157,26 +118,5 @@ body {
 
   &:active .icon {
     fill: $green-200;
-  }
-}
-
-.btn-status {
-  transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
-
-  &:focus {
-    outline: 0;
-    box-shadow: 0 0 0 4px $green-200;
-  }
-
-  &:hover {
-    background-color: $green-999;
-  }
-
-  &:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.25);
-  }
-
-  &:active .icon {
-    opacity: 0.5;
   }
 }

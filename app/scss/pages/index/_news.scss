@@ -1,0 +1,119 @@
+.news {
+  padding: 0 0 72px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__btn {
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $green-900;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: color 0.5s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $green-900;
+      transition: background-color 0.5s;
+    }
+
+    &:hover {
+      color: $green-999;
+
+      &::after {
+        background-color: $green-999;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: calc((100% / 3) - 20px);
+    height: 348px;
+    box-shadow: 0 3px 3px rgba($black, 0.25);
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    &:hover .news__subtitle {
+      color: $green-900;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 76px;
+    border-radius: 0 0 4px 4px;
+    background-color: $white;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  &__month {
+    margin-bottom: 4px;
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &__img {
+    margin-bottom: 18px;
+    height: 240px;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+  }
+
+  &__subtitle {
+    padding: 0 18px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    @include lineClamp(3);
+
+    transition: color 0.5s;
+  }
+}

@@ -2,11 +2,20 @@
 @import "fonts";
 @import "reset";
 @import "libs";
+@import "mixin";
 @import "global";
-@import "header";
-@import "app/scss/index/top-slider";
-@import "app/scss/index/advantage";
-@import "products";
-@import "app/scss/index/promo";
-@import "app/scss/index/discount";
-@import "footer";
+
+@import "components/header";
+@import "components/btn";
+@import "components/filter-mix";
+@import "components/burger";
+@import "components/advantage";
+@import "components/products";
+@import "components/footer";
+
+@import "pages/index/cart-modalwindow";
+@import "pages/index/top-slider";
+@import "pages/index/promo";
+@import "pages/index/discount";
+@import "pages/index/partners";
+@import "pages/index/news";
