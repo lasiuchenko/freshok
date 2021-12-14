@@ -1,10 +1,6 @@
 .top-slider {
   height: 600px;
 
-  @include max-w($xl) {
-    height: 500px;
-  }
-
   &__item {
     position: relative;
     width: 100%;
@@ -16,6 +12,10 @@
     @include max-w($xl) {
       height: 500px;
     }
+
+    @include max-w($l) {
+      height: 400px;
+    }
   }
 
   &__wrap {
@@ -26,7 +26,10 @@
   }
 
   &__inner {
-    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 315px;
     padding: 24px 24px;
     border-radius: 4px;
     background-color: rgba($white, 0.8);
@@ -43,6 +46,14 @@
     text-transform: uppercase;
     @include lineClamp(2);
     letter-spacing: 0.015em;
+
+    @include max-w($xl) {
+      font-size: 50px;
+    }
+
+    @include max-w($l) {
+      font-size: 40px;
+    }
 
     &--red {
       display: block;
@@ -101,50 +112,59 @@
   &__arrow {
     width: 18px;
     height: 32px;
-    display: inline-block;
     fill: $dark-500;
     transition: fill 0.5s;
   }
-}
-
-.slick-arrow {
-  position: absolute;
-  font-size: 0;
 
   @include max-w($xl) {
-    display: none;
+    height: 500px;
+  }
+
+  @include max-w($l) {
+    height: 400px;
+  }
+}
+
+.slick-slider {
+  .slick-arrow {
+    position: absolute;
+    font-size: 0;
+
+    @include max-w($xl) {
+      display: none !important;
+    }
+  }
+
+  .slick-dots {
+    display: none !important;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $white;
+      font-size: 0;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    .slick-active {
+      border: 1px solid $green-900;
+      background-color: $green-900;
+    }
+
+    @include max-w($xl) {
+      display: flex !important;
+    }
   }
 }
 
 .slick-disabled .top-slider__arrow {
   fill: $silver-600;
-}
-
-.slick-dots {
-  display: none;
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translateX(-50%);
-
-  li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $white;
-    font-size: 0;
-
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-  }
-
-  .slick-active {
-    border: 1px solid $green-900;
-    background-color: $green-900;
-  }
-
-  @include max-w($xl) {
-    display: flex;
-  }
 }

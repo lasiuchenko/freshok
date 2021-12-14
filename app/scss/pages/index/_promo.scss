@@ -1,14 +1,22 @@
 .promo {
   padding-bottom: 72px;
 
+  @include max-w($l) {
+    padding-bottom: 52px;
+  }
+
   &__list {
     display: flex;
-    height: 300px;
+
+    @include max-w($l) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     max-width: 300px;
     width: 100%;
+    max-height: 300px;
     font-size: 14px;
     color: $dark-500;
     line-height: 1;
@@ -18,17 +26,22 @@
       margin-right: 30px;
     }
 
+    @include max-w($l) {
+      margin-bottom: 30px;
+    }
+
     &--white {
       max-width: 630px;
       width: 100%;
       color: $white;
       text-shadow: 1px 1px 0px rgba($black, 0.25);
 
-      & .promo-card__title {
+      .promo-card__title {
+        max-width: 364px;
         text-shadow: 2px 2px 0px rgba($black, 0.25);
       }
 
-      & .promo-card__link {
+      .promo-card__link {
         border-bottom: 2px solid $white;
       }
     }
@@ -59,7 +72,17 @@
     font-size: 30px;
     line-height: 1.4;
     text-transform: uppercase;
-    @include lineClamp(2);
+    @include lineClamp(3);
+
+    @include max-w($l) {
+      font-size: 24px;
+    }
+
+    &--bread {
+      @include max-w($l) {
+        width: min-content;
+      }
+    }
   }
 
   &__link {

@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  width: 180px;
   padding: 12px 24px;
   font-size: 18px;
   font-weight: 400;
@@ -9,6 +10,16 @@
   border-radius: 6px;
   background-color: $green-900;
   transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
+
+  @include max-w($l) {
+    width: 161px;
+    font-size: 16px;
+  }
+
+  @include max-w($m) {
+    width: 153px;
+    font-size: 14px;
+  }
 
   &:focus {
     outline: 0;
