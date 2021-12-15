@@ -5,11 +5,16 @@
     padding-bottom: 52px;
   }
 
+  @include max-w($m) {
+    padding-bottom: 47px;
+  }
+
   &__list {
     display: flex;
 
     @include max-w($l) {
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -22,12 +27,22 @@
     line-height: 1;
     font-weight: 700;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include max-w($l) {
+      max-width: 630px;
+      margin-bottom: 30px;
     }
 
-    @include max-w($l) {
-      margin-bottom: 30px;
+    @include max-w($s) {
+      max-width: 345px;
+      margin-bottom: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include max-w($l) {
+        margin-right: 0;
+      }
     }
 
     &--white {
@@ -35,6 +50,11 @@
       width: 100%;
       color: $white;
       text-shadow: 1px 1px 0px rgba($black, 0.25);
+
+      @include max-w($s) {
+        max-width: 345px;
+        margin-bottom: 16px;
+      }
 
       .promo-card__title {
         max-width: 364px;
@@ -56,6 +76,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include max-w($s) {
+    padding: 75px 16px 31px;
+  }
 
   &__suptitle {
     margin-bottom: 18px;

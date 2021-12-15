@@ -4,14 +4,20 @@
   color: $white;
 
   &__logo {
-    display: inline-block;
+    display: block;
+    width: 100%;
     margin-bottom: 30px;
+
+    @include max-w($l) {
+      display: inline-block;
+    }
   }
 
   &__body {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__text {
@@ -33,6 +39,10 @@
   &__contact {
     display: flex;
     flex-direction: column;
+
+    @include max-w($l) {
+      order: -1;
+    }
   }
 
   &__phone {

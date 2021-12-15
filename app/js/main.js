@@ -11,7 +11,27 @@ $(function () {
     infinite: false,
     speed: 500,
     slidesToShow: 6, 
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 784,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 658,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   });
   
   $('.catalog__btn').on('click', function () {
