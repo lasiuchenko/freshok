@@ -39,10 +39,6 @@
   &__contact {
     display: flex;
     flex-direction: column;
-
-    @include max-w($l) {
-      order: -1;
-    }
   }
 
   &__phone {
