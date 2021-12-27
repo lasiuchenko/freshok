@@ -3,13 +3,18 @@
   padding: 30px 0;
   color: $white;
 
-  &__logo {
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
+  @include max-w($xm) {
+    padding: 24px 0;
+  }
 
-    @include max-w($l) {
-      display: inline-block;
+  &__logo {
+    margin-bottom: 30px;
+    display: block;
+
+    @include max-w($xm) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
     }
   }
 
@@ -18,6 +23,25 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include max-w($xm) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-wrap {
+    margin-right: 75px;
+
+    @include max-w($xl) {
+      margin-right: 50px;
+    }
+
+    @include max-w($xm) {
+      margin-right: 0;
+      padding: 24px 0;
+    }
   }
 
   &__text {
@@ -25,11 +49,31 @@
     @include lineClamp(2);
   }
 
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 467px;
-    width: 100%;
+  &__list {
+    position: relative;
+    column-count: 3;
+    column-gap: 75px;
+
+    @include max-w($xl) {
+      column-gap: 50px;
+      column-count: 2;
+    }
+
+    @include max-w($xm) {
+      padding: 24px 0 24px 30px;
+      order: -1;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+      }
+    }
   }
 
   &__item:not(:last-child) {
@@ -37,8 +81,25 @@
   }
 
   &__contact {
+    position: relative;
     display: flex;
     flex-direction: column;
+
+    @include max-w($xm) {
+      padding: 24px 0;
+      order: -2;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+      }
+    }
   }
 
   &__phone {
@@ -54,11 +115,20 @@
   &__bottom {
     border-top: 1px solid $dark-500;
     padding-top: 28px;
+
+    @include max-w($xm) {
+      padding-top: 24px;
+    }
   }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($xm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__copy {
@@ -105,6 +175,11 @@
 
 .payments {
   display: flex;
+
+  @include max-w($xm) {
+    order: -1;
+    margin-bottom: 24px;
+  }
 
   &__item {
     height: 29px;
