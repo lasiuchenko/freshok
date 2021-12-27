@@ -60,7 +60,7 @@
     }
 
     @include max-w($xm) {
-      padding: 24px 0 24px 30px;
+      padding: 24px 0 24px 50px;
       order: -1;
 
       &::before {
