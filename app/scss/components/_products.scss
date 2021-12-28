@@ -26,6 +26,7 @@
     }
 
     @include max-w($m) {
+      width: calc((100% / 2) - 6px);
       margin: 0 3px 6px;
     }
   }
@@ -39,14 +40,23 @@
   max-width: 300px;
   width: 100%;
   max-height: 409px;
+  min-height: 304px;
   height: 100%;
   padding: 57px 1px 18px;
   border-radius: 6px;
   text-align: start;
 
+  @include max-w($m) {
+    padding: 57px 1px 10px;
+  }
+
   &__link {
     position: relative;
     margin-bottom: 10px;
+
+    @include max-w($m) {
+      margin-bottom: 16px;
+    }
 
     &::before {
       @include pseudo;
@@ -128,6 +138,10 @@
   display: flex;
   transition: box-shadow 0.5s, fill 0.5s, opacity 0.5s;
 
+  @include max-w($m) {
+    right: 9px;
+  }
+
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 3px $green-200;
@@ -147,6 +161,11 @@
     width: 32px;
     height: 28px;
     transition: fill 0.5s, opacity 0.5s;
+
+    @include max-w($m) {
+      width: 24px;
+      height: 21px;
+    }
   }
 }
 
@@ -154,6 +173,10 @@
   margin-top: auto;
   line-height: 1;
   padding: 0 18px;
+
+  @include max-w($m) {
+    padding: 0 10px;
+  }
 
   &--mini {
     display: flex;

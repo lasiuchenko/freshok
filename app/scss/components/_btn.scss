@@ -68,6 +68,11 @@
     height: 32px;
     border-radius: 3px;
     background-color: $green-900;
+
+    @include max-w($m) {
+      bottom: 12px;
+      right: 8px;
+    }
   }
 
   &__icon-cart {

@@ -36,7 +36,7 @@
     padding: 25px 0;
 
     @include max-w($l) {
-      padding: 11px 0;
+      padding: 6px 0;
     }
   }
 
@@ -47,10 +47,6 @@
     max-width: 845px;
     width: 100%;
     color: $dark-800;
-
-    @include max-w($l) {
-      display: none;
-    }
   }
 }
 
@@ -67,7 +63,7 @@
     margin-right: 48px;
 
     @include max-w($xl) {
-      margin-right: 31px;
+      margin-right: 7px;
     }
   }
 
@@ -108,6 +104,10 @@
   width: 100%;
   margin-right: 30px;
   position: relative;
+
+  @include max-w($l) {
+    display: none;
+  }
 
   &__btn {
     padding: 15px 40px 15px 58px;
@@ -206,6 +206,10 @@
   width: 100%;
   box-shadow: 0 0 0 rgba($green-900, 0.2);
 
+  @include max-w($xm) {
+    display: none;
+  }
+
   &::before {
     @include pseudo;
     background-image: url("../images/sprite.svg#icon-search");
@@ -299,6 +303,26 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include max-w($xm) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--heart,
+    &--user {
+      @include max-w($xm) {
+        display: none;
+      }
+    }
+
+    &--search {
+      display: none;
+
+      @include max-w($xm) {
+        display: block;
+      }
     }
 
     &--search::after {
@@ -347,5 +371,11 @@
     letter-spacing: 0.03em;
     color: $red-900;
     z-index: 1;
+
+    @include max-w($xm) {
+      top: 6px;
+      right: 26px;
+      font-size: 9px;
+    }
   }
 }
