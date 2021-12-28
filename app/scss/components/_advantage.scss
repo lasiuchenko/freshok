@@ -38,8 +38,7 @@
     }
 
     &::before {
-      position: absolute;
-      content: "";
+      @include pseudo;
       top: 0;
       left: 0;
       width: 50px;

@@ -1,146 +1,160 @@
 <header class="header">
-	<nav class="header__menu">
-		<div class="header__top">
-			<div class="container">
-				<div class="header__top-wrap">
-					<ul class="contact">
-						<li class="contact__item">
-							<a class="contact__link status" href="#">
-								<svg class="contact__icon icon">
-									<use xlink:href="images/sprite.svg#icon-del"></use>
-								</svg>
-								адрес и время доставки
-							</a>
-						</li>
+  <nav class="header__menu">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrap">
+          <button class="burger-btn burger-btn--header" type="button">
+            <span class="burger-btn__line burger-btn__line--white"></span>
+            <span class="sr-only">Закрыть корзину</span>
+          </button>
 
-						<li class="contact__item">
-							<a class="contact__link status" href="#">
-								<svg class="contact__icon icon">
-									<use xlink:href="images/sprite.svg#icon-tel"></use>
-								</svg>
-								горячая линия 24/7
-							</a>
-						</li>
-					</ul>
+          <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__link status" href="#">
+                <svg class="contact__icon icon">
+                  <use xlink:href="images/sprite.svg#icon-del"></use>
+                </svg>
+                адрес и время доставки
+              </a>
+            </li>
 
-					<ul class="about">
-						<li class="about__item">
-							<a class="about__link status" href="#">Доставка</a>
-						</li>
+            <li class="contact__item">
+              <a class="contact__link status" href="#">
+                <svg class="contact__icon icon">
+                  <use xlink:href="images/sprite.svg#icon-tel"></use>
+                </svg>
+                горячая линия 24/7
+              </a>
+            </li>
+          </ul>
 
-						<li class="about__item">
-							<a class="about__link status" href="#">О нас</a>
-						</li>
+          <ul class="about">
+            <li class="about__item">
+              <a class="about__link status" href="#">Доставка</a>
+            </li>
 
-						<li class="about__item">
-							<a class="about__link status" href="#">Новости</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+            <li class="about__item">
+              <a class="about__link status" href="#">О нас</a>
+            </li>
 
-		<div class="header__bottom">
-			<div class="container">
-				<div class="header__bottom-wrap">
-					<a class="logo" href="#">
-						<img class="logo__img" src="images/logo.svg" alt="Логотип" width="200"
-							height="60">
-					</a>
+            <li class="about__item">
+              <a class="about__link status" href="#">Новости</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-					<div class="header__finder">
-						<div class="catalog">
-							<button class="catalog__btn" type="button">Каталог продуктов
-							</button>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-wrap">
+          <a class="logo" href="#">
+            <picture>
+              <source srcset="images/logo-short.svg" media="(max-width: 1024px)">
+              <source srcset="images/logo.svg"> <img srcset="default.svg"
+                alt=" Логотип онлайн-маркета Фрешок">
+            </picture>
+          </a>
 
-							<ul class="catalog__list">
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Овощи и фрукты</a>
-								</li>
+          <div class="header__finder">
+            <div class="catalog">
+              <button class="catalog__btn" type="button">Каталог продуктов
+              </button>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Бакалея</a>
-								</li>
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Овощи и фрукты</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">
-										Молочные продукты
-									</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Бакалея</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Хлеб</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Молочные продукты
+                  </a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Мясо</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Хлеб</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Колбаса</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Мясо</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Рыба</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Колбаса</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Алкоголь</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Рыба</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Напитки</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Алкоголь</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Торты</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Напитки</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Мясо</a>
-								</li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Торты</a>
+                </li>
 
-								<li class="catalog__item">
-									<a class="catalog__link" href="#">Чай, кофе</a>
-								</li>
-							</ul>
-						</div>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Мясо</a>
+                </li>
 
-						<form class="search-main" action="#" method="get">
-							<label class="sr-only" for="search-main">
-								Поиск товаров в интернет-магазине
-							</label>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Чай, кофе</a>
+                </li>
+              </ul>
+            </div>
 
-							<input class="search-main__field" name="search-main" id="search-main"
-								placeholder="Найти в магазине ..." type="search" required>
+            <form class="search-main" action="#" method="get">
+              <label class="sr-only" for="search-main">
+                Поиск товаров в интернет-магазине
+              </label>
 
-							<button class="search-main__btn" type="submit">Поиск</button>
-						</form>
-					</div>
+              <input class="search-main__field" name="search-main" id="search-main"
+                placeholder="Найти в магазине ..." type="search" required>
 
-					<ul class="user-nav">
-						<li class="user-nav__item">
-							<button class="user-nav__link user-nav__link--user" type="button">
-								<span class=" sr-only">Открыть меню пользователя</span>
-							</button>
-						</li>
+              <button class="search-main__btn" type="submit">Поиск</button>
+            </form>
+          </div>
 
-						<li class="user-nav__item">
-							<button class="user-nav__link user-nav__link--heart" type="button">
-								<span class="user-nav__num">12</span>
-								<span class="sr-only">Открыть избранное</span>
-							</button>
-						</li>
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--search" type="button">
+                <span class=" sr-only">Поиск товаров в интернет-магазине</span>
+              </button>
+            </li>
 
-						<li class="user-nav__item">
-							<button class="user-nav__link user-nav__link--cart" type="button">
-								<span class="user-nav__num">12</span>
-								<span class="sr-only">Открыть корзину</span>
-							</button>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--user" type="button">
+                <span class=" sr-only">Открыть меню пользователя</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--heart" type="button">
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">Открыть избранное</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--cart" type="button">
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">Открыть корзину</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>

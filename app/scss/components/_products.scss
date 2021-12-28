@@ -49,8 +49,7 @@
     margin-bottom: 10px;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include pseudo;
       top: 0;
       left: 0;
       width: 100%;
@@ -183,8 +182,7 @@
     color: $silver-600;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include pseudo;
       border-bottom: 1px solid $silver-600;
       position: absolute;
       width: 100%;
