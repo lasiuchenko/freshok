@@ -11,16 +11,6 @@
   background-color: $green-900;
   transition: box-shadow 0.5s, background-color 0.5s, opacity 0.5s;
 
-  @include max-w($l) {
-    width: 161px;
-    font-size: 16px;
-  }
-
-  @include max-w($m) {
-    width: 153px;
-    font-size: 14px;
-  }
-
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 4px $green-200;
@@ -36,6 +26,16 @@
 
   &:active .icon {
     opacity: 0.5;
+  }
+
+  @include max-w($l) {
+    width: 161px;
+    font-size: 16px;
+  }
+
+  @include max-w($m) {
+    width: 153px;
+    font-size: 14px;
   }
 
   &--white {
@@ -56,6 +56,16 @@
     &:active {
       color: rgba(99, 166, 14, 0.5);
       box-shadow: inset 0 10px 4px rgba($black, 0.1);
+    }
+
+    @include max-w($l) {
+      width: 180px;
+      font-size: 18px;
+    }
+
+    @include max-w($m) {
+      width: 180px;
+      font-size: 18px;
     }
   }
 

@@ -43,6 +43,10 @@ $(function () {
     $('.cart-popup').slideToggle('3000');
   });
 
+  $('.user-nav__link--search').on('click', function () {
+    $('.search-mobile').slideToggle('3000');
+  });
+
   $('.burger-btn--mini').on('click', function () {
      let parent = $(this).parent();
   parent.hide();

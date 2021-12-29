@@ -85,8 +85,8 @@
         <div class="header__bottom-wrap">
           <a class="logo" href="#">
             <picture>
-              <source srcset="images/logo-short.svg" media="(max-width: 1024px)">
-              <source srcset="images/logo.svg"> <img srcset="default.svg"
+              <source srcset="images/logo/logo-short.svg" media="(max-width: 1024px)">
+              <source srcset="images/logo/logo.svg"> <img srcset="default.svg"
                 alt=" Логотип онлайн-маркета Фрешок">
             </picture>
           </a>
@@ -167,6 +167,17 @@
                 <span class=" sr-only">Поиск товаров в интернет-магазине</span>
               </button>
             </li>
+
+            <form class="search-mobile search-main" action="#" method="get">
+              <label class="sr-only" for="search-main">
+                Поиск товаров в интернет-магазине
+              </label>
+
+              <input class="search-main__field" name="search-main" id="search-main"
+                placeholder="Я ищу..." type="search" required>
+
+              <button class="search-main__btn" type="submit">Поиск</button>
+            </form>
 
             <li class="user-nav__item">
               <button class="user-nav__link user-nav__link--user" type="button">
@@ -260,7 +271,7 @@
 	<div class="container">
 		<h2 class="title">Топовые товары</h2>
 
-		<ul class="filter-mix">
+		<ul class="filter-mix filter-mix--top">
 			<li class="filter-mix__item">
 				<button class="filter-mix__link" type="button" data-filter="all">
 					Все товары
@@ -1063,7 +1074,7 @@
 <footer class="footer">
 	<div class="container">
 		<a class="logo footer__logo" href="#">
-			<img class="logo__img" src="images/logo.svg" width="200" height="60">
+			<img class="logo__img" src="images/logo/logo.svg" width="200" height="60">
 		</a>
 
 		<div class="footer__body">
@@ -1195,6 +1206,92 @@
 		</div>
 	</div>
 </footer>
+<div class="mobile-menu">
+	<div class="mobile-menu__logo">
+		<a class="logo" href="#">
+			<picture>
+				<source srcset="images/logo/logo-mobile.svg" sizes="min-width: 200px">
+				<img class="logo__mobile-img" srcset="images/logo/logo-mobile.svg"
+					alt="Логотип онлайн-маркета Фрешок">
+			</picture>
+		</a>
+
+		<button class="burger-btn burger-btn--close close" type="button">
+			<span
+				class="burger-btn__line burger-btn__line--close burger-btn__line--mobile"></span>
+			<span class="sr-only">Закрыть окно менюу</span>
+		</button>
+	</div>
+
+	<ul class="mobile-menu__user-nav">
+		<li class="mobile-menu__item mobile-menu__item--user">
+			<a class="mobile-menu__login" href="#">
+				Вход
+			</a>
+		</li>
+
+		<li class="mobile-menu__item">
+			<a class="mobile-menu__registration" href="#">
+				Регистрация
+			</a>
+		</li>
+	</ul>
+
+	<div class="catalog catalog-mobile">
+		<button class="catalog__btn" type="button">Каталог продуктов
+		</button>
+
+		<ul class="catalog__list">
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Овощи и фрукты</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Бакалея</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">
+					Молочные продукты
+				</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Хлеб</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Мясо</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Колбаса</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Рыба</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Алкоголь</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Напитки</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Торты</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Мясо</a>
+			</li>
+
+			<li class="catalog__item">
+				<a class="catalog__link" href="#">Чай, кофе</a>
+			</li>
+		</ul>
 <div class="cart-popup">
 	<form class="cart-popup__content" action="#">
 		<div class="cart-popup__head">

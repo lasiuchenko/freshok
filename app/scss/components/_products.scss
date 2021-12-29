@@ -1,6 +1,7 @@
 .products {
   padding: 72px 0;
   text-align: center;
+  min-height: 304px;
 
   @include max-w($l) {
     padding: 52px 0;

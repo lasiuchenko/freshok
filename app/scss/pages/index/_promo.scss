@@ -6,7 +6,7 @@
   }
 
   @include max-w($m) {
-    padding-bottom: 47px;
+    padding-bottom: 79px;
   }
 
   &__list {
@@ -59,6 +59,10 @@
       .promo-card__title {
         max-width: 364px;
         text-shadow: 2px 2px 0px rgba($black, 0.25);
+
+        @include max-w ($m) {
+          max-width: 288px;
+        }
       }
 
       .promo-card__link {
@@ -70,14 +74,16 @@
 
 .promo-card {
   width: 100%;
+  min-height: 300px;
   height: 100%;
   padding: 76px 32px;
   border-radius: 6px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-transform: uppercase;
 
-  @include max-w($s) {
+  @include max-w($l) {
     padding: 75px 16px 31px;
   }
 
@@ -87,6 +93,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     @include lineClamp(2);
+
+    @include max-w($l) {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -100,6 +110,7 @@
 
     @include max-w($l) {
       font-size: 24px;
+      margin-bottom: 77px;
     }
 
     &--bread {

@@ -1,0 +1,47 @@
+.mobile-menu {
+  max-width: 300px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 26px 26px 26px 15px;
+  }
+
+  &__user-nav {
+    display: flex;
+    padding: 9px 15px;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $white;
+    background-color: $green-900;
+  }
+
+  &__item {
+    padding-left: 10px;
+
+    &--user {
+      position: relative;
+      padding-left: 30px;
+      padding-right: 10px;
+      background-image: url('../../images/icons/icon-user.svg');
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &::after {
+        @include pseudo;
+        top: 50%;
+        right: 0;
+        width: 2px;
+        height: 16px;
+        transform: translateY(-50%);
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.catalog-mobile {
+  display: block;
+}

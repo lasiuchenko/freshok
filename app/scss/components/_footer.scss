@@ -60,7 +60,7 @@
     }
 
     @include max-w($xm) {
-      padding: 24px 0 24px 50px;
+      padding: 24px 0 24px 34px;
       order: -1;
 
       &::before {
@@ -198,6 +198,10 @@
 
 .social {
   display: flex;
+
+  @include max-w($m) {
+    justify-content: center;
+  }
 
   &__item:not(:last-child) {
     margin-right: 12px;

@@ -9,8 +9,16 @@
 
   @include max-w($s) {
     flex-wrap: wrap;
-    width: 274px;
-    margin: 0 auto 9px;
+    width: 275px;
+    margin: 0 auto 10px;
+  }
+
+  &--top {
+    @include max-w($s) {
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto 10px;
+    }
   }
 
   &__item {

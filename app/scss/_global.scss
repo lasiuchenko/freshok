@@ -42,7 +42,14 @@ body {
   display: flex;
   align-items: center;
   margin-right: 30px;
-  width: 100%;
+
+  @include max-w($xm) {
+    width: 100%;
+  }
+
+  &__mobile-img {
+    width: 100%;
+  }
 }
 
 .product-status {

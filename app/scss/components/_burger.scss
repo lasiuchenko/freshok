@@ -57,6 +57,14 @@
       }
     }
 
+    &--mobile {
+      width: 18px;
+
+      &::after {
+        width: 18px;
+      }
+    }
+
     &--mini {
       width: 12px;
       background-color: $silver-600;

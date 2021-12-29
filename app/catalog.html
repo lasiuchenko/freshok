@@ -85,8 +85,8 @@
         <div class="header__bottom-wrap">
           <a class="logo" href="#">
             <picture>
-              <source srcset="images/logo-short.svg" media="(max-width: 1024px)">
-              <source srcset="images/logo.svg"> <img srcset="default.svg"
+              <source srcset="images/logo/logo-short.svg" media="(max-width: 1024px)">
+              <source srcset="images/logo/logo.svg"> <img srcset="default.svg"
                 alt=" Логотип онлайн-маркета Фрешок">
             </picture>
           </a>
@@ -168,6 +168,17 @@
               </button>
             </li>
 
+            <form class="search-mobile search-main" action="#" method="get">
+              <label class="sr-only" for="search-main">
+                Поиск товаров в интернет-магазине
+              </label>
+
+              <input class="search-main__field" name="search-main" id="search-main"
+                placeholder="Я ищу..." type="search" required>
+
+              <button class="search-main__btn" type="submit">Поиск</button>
+            </form>
+
             <li class="user-nav__item">
               <button class="user-nav__link user-nav__link--user" type="button">
                 <span class=" sr-only">Открыть меню пользователя</span>
@@ -200,7 +211,7 @@
 <footer class="footer">
 	<div class="container">
 		<a class="logo footer__logo" href="#">
-			<img class="logo__img" src="images/logo.svg" width="200" height="60">
+			<img class="logo__img" src="images/logo/logo.svg" width="200" height="60">
 		</a>
 
 		<div class="footer__body">
