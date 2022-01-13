@@ -39,7 +39,11 @@ $(function () {
     $('.catalog__list').slideToggle('3000');
   });
 
-  $('.user-nav__link--cart, .burger-btn--close').on('click', function () {
+  $('.burger-btn--header, .mobile-close').on('click', function () {
+    $('.mobile-menu').slideToggle('3000');
+  });
+  
+  $('.user-nav__link--cart, .cart-close').on('click', function () {
     $('.cart-popup').slideToggle('3000');
   });
 

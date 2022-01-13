@@ -1,86 +1,184 @@
 <div class="mobile-menu">
-	<div class="mobile-menu__logo">
-		<a class="logo" href="#">
-			<picture>
-				<source srcset="images/logo/logo-mobile.svg" sizes="min-width: 200px">
-				<img class="logo__mobile-img" srcset="images/logo/logo-mobile.svg"
-					alt="Логотип онлайн-маркета Фрешок">
-			</picture>
-		</a>
-
-		<button class="burger-btn burger-btn--close close" type="button">
-			<span
-				class="burger-btn__line burger-btn__line--close burger-btn__line--mobile"></span>
-			<span class="sr-only">Закрыть окно менюу</span>
-		</button>
-	</div>
-
-	<ul class="mobile-menu__user-nav">
-		<li class="mobile-menu__item mobile-menu__item--user">
-			<a class="mobile-menu__login" href="#">
-				Вход
+	<div class="mobile-menu__content">
+		<div class="mobile-menu__logo">
+			<a class="logo" href="#">
+				<picture>
+					<source srcset="images/logo/logo-mobile.svg" sizes="min-width: 200px">
+					<img class="logo__mobile-img" srcset="images/logo/logo-mobile.svg"
+						alt="Логотип онлайн-маркета Фрешок">
+				</picture>
 			</a>
-		</li>
 
-		<li class="mobile-menu__item">
-			<a class="mobile-menu__registration" href="#">
-				Регистрация
-			</a>
-		</li>
-	</ul>
+			<button class="burger-btn burger-btn--close mobile-close close" type="button">
+				<span
+					class="burger-btn__line burger-btn__line--close burger-btn__line--mobile"></span>
+				<span class="sr-only">Закрыть окно менюу</span>
+			</button>
+		</div>
 
-	<div class="catalog catalog-mobile">
-		<button class="catalog__btn" type="button">Каталог продуктов
-		</button>
-
-		<ul class="catalog__list">
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Овощи и фрукты</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Бакалея</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">
-					Молочные продукты
+		<ul class="mobile-menu__user-nav">
+			<li class="mobile-menu__item mobile-menu__item--user">
+				<a class="mobile-menu__login" href="#">
+					Вход
 				</a>
 			</li>
 
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Хлеб</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Мясо</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Колбаса</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Рыба</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Алкоголь</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Напитки</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Торты</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Мясо</a>
-			</li>
-
-			<li class="catalog__item">
-				<a class="catalog__link" href="#">Чай, кофе</a>
+			<li class="mobile-menu__item">
+				<a class="mobile-menu__registration" href="#">
+					Регистрация
+				</a>
 			</li>
 		</ul>
+
+		<div class="catalog catalog-mobile">
+			<button class="catalog__btn" type="button">Каталог продуктов
+			</button>
+
+			<ul class="catalog__list">
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Овощи и фрукты</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Бакалея</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">
+						Молочные продукты
+					</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Хлеб</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Мясо</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Колбаса</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Рыба</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Алкоголь</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Напитки</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Торты</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Мясо</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Чай, кофе</a>
+				</li>
+			</ul>
+		</div>
+
+		<address class="mobile-menu__contact">
+			<a class="mobile-menu__phone status" href="tel:+7907288365">
+				+7 907 288 365
+			</a>
+			<span class="mobile-menu__desc">
+				Санкт-Петербург, ул. Ленина, 1ß
+			</span>
+
+			<ul class="social">
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#facebook"></use>
+						</svg>
+						<span class="sr-only">Перейти в Фейсбук</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#youtube"></use>
+						</svg>
+						<span class="sr-only">Перейти в Ютуб</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#telegram"></use>
+						</svg>
+						<span class="sr-only">Перейти в Телеграм</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#instagram"></use>
+						</svg>
+						<span class="sr-only">Перейти в Инстаграм</span>
+					</a>
+				</li>
+			</ul>
+		</address>
+
+		<ul class="nav-menu">
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					О нас
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Контакты
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Публичная оферта
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Оплата и доставка
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Вакансии
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Акции
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Отзывы
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Новости
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

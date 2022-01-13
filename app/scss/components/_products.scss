@@ -26,7 +26,7 @@
       width: 300px;
     }
 
-    @include max-w($m) {
+    @include max-w($xs) {
       width: calc((100% / 2) - 6px);
       margin: 0 3px 6px;
     }
