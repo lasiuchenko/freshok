@@ -69,6 +69,16 @@ $(function () {
   parent.hide();
   });
 
+
+  $('.filters__btn').on('click', function () {
+   $('.filters__btn').toggleClass('filters__btn--active');
+   $('.filter-catalog__list').slideToggle('3000');
+ });
+
+
+
+
+
   $('.rate__star').rateYo({
     readOnly: true,
     numStars: 1,
@@ -88,8 +98,7 @@ $(function () {
     let count = parseFloat($input.val()) + 1
       $input.val(count);
     }
-  
-});
+  });
   
   let mixerOne = mixitup('.products', {
     controls: {

@@ -1,0 +1,32 @@
+.breadcrumbs {
+  height: 65px;
+  background-color: $silver-100;
+
+  &__list {
+    display: flex;
+    padding: 24px 0;
+    line-height: 1.2;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-right: 16px;
+
+      &::after {
+        @include pseudo;
+        background-image: url('../../images/icons/icon-arrow-right.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 6px;
+        height: 10px;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        filter: invert(1);
+      }
+    }
+  }
+}
