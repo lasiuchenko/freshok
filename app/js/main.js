@@ -65,18 +65,18 @@ $(function () {
   });
 
   $('.burger-btn--mini').on('click', function () {
-     let parent = $(this).parent();
-  parent.hide();
+    let parent = $(this).parent();
+      parent.hide();
   });
 
 
   $('.filters__btn').on('click', function () {
-   $('.filters__btn').toggleClass('filters__btn--active');
-   $('.filter-catalog__list').slideToggle('3000');
- });
-
-
-
+    let catalog = $(this).next('ul');
+    
+    catalog.toggleClass('filters__btn--active');
+    catalog.toggleClass('filter-catalog--active');
+    catalog.slideToggle('3000');
+  });
 
 
   $('.rate__star').rateYo({

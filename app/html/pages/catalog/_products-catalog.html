@@ -1,7 +1,7 @@
 <section class="shop">
 	<div class="container">
 		<h2 class="shop__title">Каталог товаров</h2>
-		<ul class="shop__inner">
+		<div class="shop__inner">
 			<ul class="shop__filters filters">
 				<li class="filter-catalog filters__item">
 					<button class="filters__btn" type="button">Категории</button>
@@ -58,10 +58,19 @@
 				</li>
 
 				<li class="filter-offering filters__item">
-					<h3 class="filters__title">Предложения</h3>
-				</li>
+					<button class="filters__btn" type="button">Предложения</button>
+					<ul>
+						<li class="filter-offering__item">
+							Мясо
+						</li>
 
-				<!--	<li class="filter-brands filters__item">
+						<li class="filter-offering__item">
+							Чай, кофе
+						</li>
+					</ul>
+				</li>
+				<!--	
+				<li class="filter-brands filters__item">
 					<h3 class="filters__title">Бренд</h3>
 				</li>
 
@@ -71,6 +80,6 @@
 			</ul>
 
 			<div class="shop__content"></div>
-	</div>
+		</div>
 	</div>
 </section>

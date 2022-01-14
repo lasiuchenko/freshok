@@ -14,22 +14,21 @@
   width: 100%;
 
   &__item {
-    padding: 18px 24px 18px 18px;
     margin-bottom: 30px;
     border: 1px solid $silver-600;
     border-radius: 6px;
-    max-height: 364px;
-    overflow-y: scroll;
   }
 
   &__btn {
     position: relative;
+    padding: 18px 24px 18px 18px;
     width: 100%;
     display: flex;
     font-family: $ruda;
     font-size: 24px;
     line-height: 1.2;
     color: $dark-900;
+    text-align: left;
 
     &::after {
       @include pseudo;
@@ -37,30 +36,38 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      width: 18px;
-      height: 11px;
-      top: 50%;
-      right: 5px;
-      transform: translateY(-50%) rotate(90deg);
+      width: 11px;
+      height: 18px;
+      top: 25px;
+      right: 25px;
+      transform: rotate(90deg);
       filter: invert(1);
+      transition: transform 0.5s;
     }
 
-    &--active {
-      .filters__btn::after {
-        transform: rotate(-90deg);
-      }
+    &--active.filters__btn::after {
+      transform: rotate(-90deg);
     }
   }
 }
 
 .filter-catalog {
   position: relative;
+  padding-bottom: 0;
+
+  &--active {
+    padding-bottom: 18px;
+  }
 
   &__list {
     display: none;
     position: sticky;
     left: 0;
     top: 100%;
+    padding: 18px 18px 0 18px;
+    max-height: 364px;
+    overflow-y: scroll;
+    border-top: 1px solid $silver-600;
     z-index: 1;
   }
 
