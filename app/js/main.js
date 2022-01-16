@@ -1,6 +1,3 @@
-let clickMobile = $('.burger-btn--header, .mobile-close');
-let clickCart = $('.user-nav__link--cart, .cart-close');
-
 $(function () {
   $('.top-slider__list').slick({
     dots: true,
@@ -37,6 +34,9 @@ $(function () {
     ]
   });
 
+  let clickMobile = $('.burger-btn--header, .mobile-close');
+  let clickCart = $('.user-nav__link--cart, .cart-close');
+
   $(clickMobile).on('click', function () {
     $('.mobile-menu').slideToggle('3000');
   });
@@ -69,15 +69,13 @@ $(function () {
       parent.hide();
   });
 
+  $('.filters__btn').on('click', function (){
+    let parent = $(this).parent();
 
-  $('.filters__btn').on('click', function () {
-    let catalog = $(this).next('ul');
-    
-    catalog.toggleClass('filters__btn--active');
-    catalog.toggleClass('filter-catalog--active');
-    catalog.slideToggle('3000');
-  });
-
+    $(this).toggleClass('filters__btn--active');
+    parent.toggleClass('filters__item--active');
+    parent.find('.filters__sub-list').slideToggle('3000');
+  })
 
   $('.rate__star').rateYo({
     readOnly: true,
@@ -111,4 +109,6 @@ $(function () {
     scope: 'local'
     }
   })
+
+ $('.filter-price__input').ionRangeSlider();
 })
