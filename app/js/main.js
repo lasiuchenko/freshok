@@ -97,6 +97,10 @@ $(function () {
       $input.val(count);
     }
   });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+  });
   
   let mixerOne = mixitup('.products', {
     controls: {
@@ -109,6 +113,4 @@ $(function () {
     scope: 'local'
     }
   })
-
- $('.filter-price__input').ionRangeSlider();
 })
