@@ -112,9 +112,26 @@
         <!-- 3 filter-->
         <li class="filter-price filters__item">
           <h3 class="filters__title">Цена</h3>
+          <div class="price-range">
+            <form class="price-range__form">
+              <div class="price-range__from">
+                <span class="price-range__text">от</span>
+                <input class="price-range__input price-range__input--from" type="number"
+                  value="">
+                <span class="price-range__currency">₽</span>
+              </div>
+
+              <div class="price-range__to">
+                <span class="price-range__text">до</span>
+                <input class="price-range__input price-range__input--to" type="number"
+                  value="">
+                <span class="price-range__currency">₽</span>
+              </div>
+            </form>
+          </div>
           <form class="filter-price__form" action="#">
-            <input class="filter-price__input" type="text" data-min="100"
-              data-max="1000">
+            <input class="filter-price__input" type="text" data-min="0" data-max="1000"
+              data-from="100" data-to="800">
           </form>
         </li>
       </ul>

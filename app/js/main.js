@@ -56,8 +56,9 @@ $(function () {
   })
 
   $('.catalog__btn').on('click', function () {
-    $('.catalog__btn').toggleClass('catalog__btn--active');
-    $('.catalog__list').slideToggle('3000');
+    let parent = $(this).parent();
+    $(this).toggleClass('catalog__btn--active');
+    parent.find('.catalog__list').slideToggle('3000');
   });
 
   $('.user-nav__link--search').on('click', function () {
@@ -99,8 +100,43 @@ $(function () {
   });
 
   $('.filter-price__input').ionRangeSlider({
-    type: "double",
+    type: 'double',
+    skin: 'big',
+    prefix: '₽',
+    onStart: function (data) {
+      $('.price-range__input--from').val(data.from);      
+      $('.price-range__input--to').val(data.to);
+    },
+
+    onChange: function(data) {
+      $('.price-range__input--from').val(data.from);
+      $('.price-range__input--to').val(data.to);
+    },
   });
+
+  let my_range = $('.filter-price__input').data('ionRangeSlider');
+  
+  $('.price-range__input--from').on('blur', function () { 
+    let from = $('.price-range__input--from').val();
+    if (from && Number(from)) { 
+      console.log('Update')
+        my_range.update({
+        from: from
+      });
+    }
+  })
+
+  $('.price-range__input--to').on('blur', function () { 
+    let to = $('.price-range__input--to').val();
+    if (to && Number(to)) { 
+      console.log('Update')
+        my_range.update({
+        to: to
+      });
+    }
+  })
+  
+
   
   let mixerOne = mixitup('.products', {
     controls: {
