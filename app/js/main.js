@@ -55,7 +55,7 @@ $(function () {
       $(this).slideToggle('3000')}
   })
 
-  $('.catalog__btn').on('click', function () {
+  $('.catalog__btn').on('click', function (e) {
     let parent = $(this).parent();
     $(this).toggleClass('catalog__btn--active');
     parent.find('.catalog__list').slideToggle('3000');
