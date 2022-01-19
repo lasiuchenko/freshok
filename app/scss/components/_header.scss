@@ -1,4 +1,5 @@
 .header {
+
   &__menu {
     display: flex;
     width: 100%;
@@ -19,9 +20,14 @@
     display: flex;
     justify-content: space-between;
     padding: 14px 0;
+
+    @include max-w($xl) {
+      padding: 0;
+    }
   }
 
   &__bottom {
+    position: relative;
     background-color: $green-900;
   }
 
@@ -30,6 +36,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
+
+    @include max-w($l) {
+      padding: 6px 0;
+    }
   }
 
   &__finder {
@@ -45,10 +55,18 @@
 .contact {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
+  @include max-w($xl) {
+    font-size: 0;
+  }
 
   &__item:not(:last-child) {
     margin-right: 48px;
+
+    @include max-w($xl) {
+      margin-right: 7px;
+    }
   }
 
   &__link {
@@ -60,6 +78,10 @@
     margin-right: 12px;
     width: 32px;
     height: 22px;
+
+    @include max-w($xl) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -71,6 +93,10 @@
   &__item:not(:last-child) {
     margin-right: 24px;
   }
+
+  @include max-w($xl) {
+    display: none;
+  }
 }
 
 .catalog {
@@ -80,6 +106,10 @@
   width: 100%;
   margin-right: 30px;
   position: relative;
+
+  @include max-w($l) {
+    display: none;
+  }
 
   &__btn {
     padding: 15px 40px 15px 58px;
@@ -94,8 +124,7 @@
     transition: background-color 0.5s, border-radius 0.5s 0.2s;
 
     &::before {
-      content: "";
-      position: absolute;
+      @include pseudo;
       top: 50%;
       left: 17px;
       width: 25px;
@@ -105,8 +134,7 @@
     }
 
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo;
       top: 50%;
       right: 19px;
       width: 7px;
@@ -128,10 +156,10 @@
 
   &__list {
     display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 1;
+position: absolute;
+left: 0;
+top: 100%;
+z-index: 1;
     width: 100%;
     height: 600px;
     background-color: $white;
@@ -172,12 +200,29 @@
 }
 
 .search-main {
+  position: relative;
   margin-right: 15px;
   display: flex;
   align-items: center;
   max-width: 576px;
   width: 100%;
   box-shadow: 0 0 0 rgba($green-900, 0.2);
+
+  @include max-w($xm) {
+    display: none;
+  }
+
+  &::before {
+    @include pseudo;
+    background-image: url("../images/sprite.svg#icon-search");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    top: 16px;
+    left: 15px;
+  }
 
   &__field {
     max-width: 419px;
@@ -215,21 +260,6 @@
     font-weight: 600;
     transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 20px;
-      height: 20px;
-      top: 50%;
-      left: -390px;
-      transform: translateY(-50%);
-      background-image: url("../images/sprite.svg#icon-search");
-      opacity: 1;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
     &:focus {
       outline: 0;
       box-shadow: 0 0 0 4px rgba($white, 0.5);
@@ -266,8 +296,7 @@
     }
 
     &:after {
-      position: absolute;
-      content: "";
+      @include pseudo;
       width: 32px;
       height: 31px;
       top: 50%;
@@ -276,6 +305,30 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include max-w($xm) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--heart,
+    &--user {
+      @include max-w($xm) {
+        display: none;
+      }
+    }
+
+    &--search {
+      display: none;
+
+      @include max-w($xm) {
+        display: block;
+      }
+    }
+
+    &--search::after {
+      background-image: url("../images/icons/icon-search.svg");
     }
 
     &--user::after {
@@ -320,5 +373,33 @@
     letter-spacing: 0.03em;
     color: $red-900;
     z-index: 1;
+
+    @include max-w($xm) {
+      top: 6px;
+      right: 26px;
+      font-size: 9px;
+    }
+  }
+}
+
+.search-mobile {
+  display: none;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  max-width: 375px;
+
+  .search-main__field {
+    max-width: 265px;
+    border-radius: 0;
+  }
+
+  .search-main__btn {
+    position: absolute;
+    max-width: 110px;
+    border-radius: 0;
+    padding: 17px 0;
   }
 }

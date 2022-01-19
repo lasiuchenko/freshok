@@ -39,11 +39,16 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
 
-  &__img {
-    object-fit: contain;
-    width: 200px;
-    height: 60px;
+  @include max-w($xm) {
+    width: 100%;
+  }
+
+  &__mobile-img {
+    width: 100%;
   }
 }
 
@@ -65,6 +70,14 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
+
+  @include max-w($l) {
+    margin-bottom: 24px;
+  }
+
+  @include max-w($m) {
+    font-size: 24px;
+  }
 }
 
 .badge {

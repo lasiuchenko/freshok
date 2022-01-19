@@ -1,0 +1,260 @@
+.shop {
+  &__title {
+    padding: 48px 0;
+    font-family: $ruda;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: $dark-900;
+  }
+
+  &__inner {
+    display: flex;
+  }
+}
+
+.shop-content {
+  &__filter {
+    padding-right: 15px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .products {
+    padding: 0 0 72px 0;
+    text-align: left;
+    min-height: 0;
+
+    &__item {
+      width: calc((100% / 3) - 30px);
+      margin: 0 15px 30px;
+    }
+  }
+
+  .btn {
+    margin-left: 15px;
+  }
+
+  .product-card__link {
+    margin-bottom: 0;
+  }
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  background-color: $silver-100;
+  border-radius: 3px;
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    fill: $silver-600;
+
+    &--active {
+      fill: $green-900;
+    }
+  }
+}
+
+.filters {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 15px;
+
+  &__item {
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1.3;
+
+    &--active {
+      padding-bottom: 18px;
+    }
+  }
+
+  &__title {
+    padding: 18px 24px 18px 18px;
+    width: 100%;
+    display: flex;
+    font-family: $ruda;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $dark-900;
+  }
+
+  &__btn {
+    position: relative;
+    text-align: left;
+
+    &::after {
+      @include pseudo;
+      background-image: url('../../images/icons/icon-arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 11px;
+      height: 18px;
+      top: 25px;
+      right: 25px;
+      transform: rotate(90deg);
+      filter: invert(1);
+      transition: transform 0.5s;
+    }
+
+    &--active.filters__btn::after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__sub-list {
+    display: none;
+    position: sticky;
+    left: 0;
+    top: 100%;
+    padding: 18px 18px 2px 18px;
+    max-height: 364px;
+    overflow-y: scroll;
+    border-top: 1px solid $silver-600;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__sub-item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.filter-price {
+  &__form {
+    padding: 0 24px 18px 18px;
+  }
+}
+
+.price-range {
+  padding: 0 24px 0 18px;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $ruda;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $silver-600;
+  }
+
+  &__from {
+    margin-right: 24px;
+  }
+
+  &__from,
+  &__to {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    display: block;
+    padding: 12px 20px;
+    width: 80px;
+    height: 40px;
+    background-color: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    text-align: center;
+    transition: box-shadow 0.5s;
+
+    &--from,
+    &--to {
+      margin: 0 6px;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
+  }
+}
+
+.filters-form {
+  &__label {
+    padding-left: 36px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked+.filters-form__checkbox {
+      background-image: url('../images/icons/icon-check.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-color: $dark-500;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    margin-left: -36px;
+    width: 24px;
+    height: 24px;
+    background-color: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $dark-500;
+    }
+  }
+}
+
+.availability-box {
+  padding: 0 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .availability {
+    margin-bottom: 0;
+  }
+
+  .rate {
+    align-items: flex-start;
+  }
+}

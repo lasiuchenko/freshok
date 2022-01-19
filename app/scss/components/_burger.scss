@@ -13,15 +13,22 @@
     height: 24px;
   }
 
+  &--header {
+    display: none;
+
+    @include max-w($xl) {
+      display: block;
+    }
+  }
+
   &__line {
 
     &,
     &::before,
     &::after {
-      content: "";
+      @include pseudo;
       width: 30px;
       height: 2px;
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -50,6 +57,14 @@
       }
     }
 
+    &--mobile {
+      width: 18px;
+
+      &::after {
+        width: 18px;
+      }
+    }
+
     &--mini {
       width: 12px;
       background-color: $silver-600;
@@ -57,6 +72,15 @@
       &::after {
         width: 12px;
         background-color: $silver-600;
+      }
+    }
+
+    &--white {
+
+      &,
+      &::before,
+      &::after {
+        background-color: $white;
       }
     }
   }

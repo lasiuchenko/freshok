@@ -1,0 +1,50 @@
+.irs--big {
+  .irs-line {
+    top: 33px;
+    height: 2px;
+    background-color: $silver-600;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .irs-bar {
+    top: 33px;
+    height: 2px;
+    background-color: $green-900;
+    border-radius: 0;
+    border: 1px solid $green-900;
+    box-shadow: none;
+  }
+
+  .irs-handle {
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $green-900;
+    background: $green-900;
+    border-radius: 30px;
+    box-shadow: none;
+
+    &:hover,
+    &.state_hover {
+      border-color: $green-900;
+      background: $green-900;
+    }
+  }
+
+  .irs-from,
+  .irs-to,
+  .irs-single {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    cursor: default;
+    white-space: nowrap;
+  }
+
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+}

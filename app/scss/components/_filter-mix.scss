@@ -3,6 +3,24 @@
   justify-content: center;
   margin-bottom: 47px;
 
+  @include max-w($l) {
+    margin-bottom: 35px;
+  }
+
+  @include max-w($s) {
+    flex-wrap: wrap;
+    width: 275px;
+    margin: 0 auto 10px;
+  }
+
+  &--top {
+    @include max-w($s) {
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto 10px;
+    }
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 24px;
@@ -10,6 +28,10 @@
 
     &--margin:not(:last-child) {
       margin-right: 34px;
+    }
+
+    @include max-w($s) {
+      margin-bottom: 15px;
     }
   }
 
@@ -19,6 +41,10 @@
     text-transform: uppercase;
     border-radius: 3px;
     transition: color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+
+    @include max-w($m) {
+      font-size: 14px;
+    }
 
     &:focus {
       outline: 0;
@@ -34,9 +60,7 @@
       color: $green-900;
 
       &::after {
-        content: "";
-        position: absolute;
-        display: block;
+        @include pseudo;
         width: 100%;
         height: 3px;
         background-color: $green-200;

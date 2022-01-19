@@ -1,21 +1,48 @@
 .promo {
   padding-bottom: 72px;
 
+  @include max-w($l) {
+    padding-bottom: 52px;
+  }
+
+  @include max-w($m) {
+    padding-bottom: 79px;
+  }
+
   &__list {
     display: flex;
-    height: 300px;
+
+    @include max-w($l) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     max-width: 300px;
     width: 100%;
+    max-height: 300px;
     font-size: 14px;
     color: $dark-500;
     line-height: 1;
     font-weight: 700;
 
+    @include max-w($l) {
+      max-width: 630px;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($s) {
+      max-width: 345px;
+      margin-bottom: 16px;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include max-w($l) {
+        margin-right: 0;
+      }
     }
 
     &--white {
@@ -24,11 +51,21 @@
       color: $white;
       text-shadow: 1px 1px 0px rgba($black, 0.25);
 
-      & .promo-card__title {
-        text-shadow: 2px 2px 0px rgba($black, 0.25);
+      @include max-w($s) {
+        max-width: 345px;
+        margin-bottom: 16px;
       }
 
-      & .promo-card__link {
+      .promo-card__title {
+        max-width: 364px;
+        text-shadow: 2px 2px 0px rgba($black, 0.25);
+
+        @include max-w ($m) {
+          max-width: 288px;
+        }
+      }
+
+      .promo-card__link {
         border-bottom: 2px solid $white;
       }
     }
@@ -37,12 +74,18 @@
 
 .promo-card {
   width: 100%;
+  min-height: 300px;
   height: 100%;
   padding: 76px 32px;
   border-radius: 6px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-transform: uppercase;
+
+  @include max-w($l) {
+    padding: 75px 16px 31px;
+  }
 
   &__suptitle {
     margin-bottom: 18px;
@@ -50,6 +93,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     @include lineClamp(2);
+
+    @include max-w($l) {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -59,7 +106,18 @@
     font-size: 30px;
     line-height: 1.4;
     text-transform: uppercase;
-    @include lineClamp(2);
+    @include lineClamp(3);
+
+    @include max-w($l) {
+      font-size: 24px;
+      margin-bottom: 77px;
+    }
+
+    &--bread {
+      @include max-w($l) {
+        width: min-content;
+      }
+    }
   }
 
   &__link {

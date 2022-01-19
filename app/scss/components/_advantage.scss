@@ -1,10 +1,22 @@
 .advantage {
   background-color: $silver-100;
-  padding: 49px 29px 29px;
+  padding: 49px 29px;
+
+  @include max-w($l) {
+    padding: 30px 29px;
+  }
+
+  @include max-w($m) {
+    padding: 20px 29px;
+  }
 
   &__list {
     display: flex;
     justify-content: center;
+
+    @include max-w($m) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -13,13 +25,20 @@
     max-width: 264px;
     width: 100%;
 
+    @include max-w($m) {
+      max-width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 65px;
+
+      @include max-w($m) {
+        margin-bottom: 30px;
+      }
     }
 
     &::before {
-      position: absolute;
-      content: "";
+      @include pseudo;
       top: 0;
       left: 0;
       width: 50px;

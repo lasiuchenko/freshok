@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Фрешок - онлайн маркет | Главная страница</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114"
+		href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120"
+		href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144"
+		href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152"
+		href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"
+		href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"
+		href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="images/favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="header__menu">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrap">
+          <button class="burger-btn burger-btn--header" type="button">
+            <span class="burger-btn__line burger-btn__line--white"></span>
+            <span class="sr-only">Закрыть корзину</span>
+          </button>
+
+          <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__link status" href="#">
+                <svg class="contact__icon icon">
+                  <use xlink:href="images/sprite.svg#icon-del"></use>
+                </svg>
+                адрес и время доставки
+              </a>
+            </li>
+
+            <li class="contact__item">
+              <a class="contact__link status" href="#">
+                <svg class="contact__icon icon">
+                  <use xlink:href="images/sprite.svg#icon-tel"></use>
+                </svg>
+                горячая линия 24/7
+              </a>
+            </li>
+          </ul>
+
+          <ul class="about">
+            <li class="about__item">
+              <a class="about__link status" href="#">Доставка</a>
+            </li>
+
+            <li class="about__item">
+              <a class="about__link status" href="#">О нас</a>
+            </li>
+
+            <li class="about__item">
+              <a class="about__link status" href="#">Новости</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-wrap">
+          <a class="logo" href="#">
+            <picture>
+              <source srcset="images/logo/logo-short.svg" media="(max-width: 1024px)">
+              <source srcset="images/logo/logo.svg"> <img srcset="default.svg"
+                alt=" Логотип онлайн-маркета Фрешок">
+            </picture>
+          </a>
+
+          <div class="header__finder">
+            <div class="catalog">
+              <button class="catalog__btn" type="button">Каталог продуктов
+              </button>
+
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Овощи и фрукты</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Бакалея</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Молочные продукты
+                  </a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Хлеб</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Мясо</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Колбаса</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Рыба</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Алкоголь</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Напитки</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Торты</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Мясо</a>
+                </li>
+
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">Чай, кофе</a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="search-main" action="#" method="get">
+              <label class="sr-only" for="search-main">
+                Поиск товаров в интернет-магазине
+              </label>
+
+              <input class="search-main__field" name="search-main" id="search-main"
+                placeholder="Найти в магазине ..." type="search" required>
+
+              <button class="search-main__btn" type="submit">Поиск</button>
+            </form>
+          </div>
+
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--search" type="button">
+                <span class=" sr-only">Поиск товаров в интернет-магазине</span>
+              </button>
+            </li>
+
+            <form class="search-mobile search-main" action="#" method="get">
+              <label class="sr-only" for="search-main">
+                Поиск товаров в интернет-магазине
+              </label>
+
+              <input class="search-main__field" name="search-main" id="search-main"
+                placeholder="Я ищу..." type="search" required>
+
+              <button class="search-main__btn" type="submit">Поиск</button>
+            </form>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--user" type="button">
+                <span class=" sr-only">Открыть меню пользователя</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--heart" type="button">
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">Открыть избранное</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--cart" type="button">
+                <span class="user-nav__num">12</span>
+                <span class="sr-only">Открыть корзину</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="main">
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<a class="logo footer__logo" href="#">
+			<img class="logo__img" src="images/logo/logo.svg" width="200" height="60">
+		</a>
+
+		<div class="footer__body">
+			<div class="footer__form-wrap">
+				<div class="footer__text">
+					<p>Следите за нашими акциями</p>
+				</div>
+				<form class="form-subscr" action="#" method="get">
+					<label class="sr-only" for="email">
+						Введите электронную почту чтобы подписаться
+					</label>
+					<input class="form-subscr__field" type="email" name="email" id="email"
+						placeholder="email@email.com" required>
+					<button class="btn form-subscr__btn" type="submit">
+						Подписаться
+					</button>
+				</form>
+			</div>
+
+			<ul class="footer__list">
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						О нас
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Контакты
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Публичная оферта
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Оплата и доставка
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Вакансии
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Акции
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Отзывы
+					</a>
+				</li>
+
+				<li class="footer__item">
+					<a class="footer__link status" href="#">
+						Новости
+					</a>
+				</li>
+			</ul>
+
+			<address class="footer__contact">
+				<a class="footer__phone status" href="tel:+7907288365">
+					Горячая линия +7 907 288 365
+				</a>
+				<span class="footer__desc">
+					Санкт-Петербург, ул. Ленина, 1ß
+				</span>
+
+				<ul class="social">
+					<li class="social__item">
+						<a class="social__link status" href="#" target="_blank">
+							<svg class="social__icon icon">
+								<use xlink:href="images/sprite.svg#facebook"></use>
+							</svg>
+							<span class="sr-only">Перейти в Фейсбук</span>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link status" href="#" target="_blank">
+							<svg class="social__icon icon">
+								<use xlink:href="images/sprite.svg#youtube"></use>
+							</svg>
+							<span class="sr-only">Перейти в Ютуб</span>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link status" href="#" target="_blank">
+							<svg class="social__icon icon">
+								<use xlink:href="images/sprite.svg#telegram"></use>
+							</svg>
+							<span class="sr-only">Перейти в Телеграм</span>
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link status" href="#" target="_blank">
+							<svg class="social__icon icon">
+								<use xlink:href="images/sprite.svg#instagram"></use>
+							</svg>
+							<span class="sr-only">Перейти в Инстаграм</span>
+						</a>
+					</li>
+				</ul>
+			</address>
+		</div>
+	</div>
+
+	<div class="footer__bottom">
+		<div class="container">
+			<div class="footer__wrap">
+				<div class="footer__copy">© 2021 Фрешок</div>
+				<ul class="payments">
+					<li class="payments__item payments__item--visa"
+						style="background-image: url(images/icons/visa.svg);">
+					</li>
+					<li class="payments__item payments__item--mastercard"
+						style="background-image: url(images/icons/mastercard.svg);">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="cart-popup">
+	<form class="cart-popup__content" action="#">
+		<div class="cart-popup__head">
+			<div class="cart-popup__wrap">
+				<h2 class="cart-popup__title">Корзина</h2>
+				<button class="cart-popup__btn" type="reset">
+					очистить корзину
+				</button>
+			</div>
+
+			<button class="burger-btn burger-btn--close close cart-close" type="button">
+				<span class="burger-btn__line burger-btn__line--close"></span>
+				<span class="sr-only">Закрыть корзину</span>
+			</button>
+		</div>
+
+		<ul class="cart-popup__list">
+			<li class="cart-popup__item" id="1">
+				<img class="cart-popup__img" src="images/products/pineapple.png" alt="Ананас"
+					width="60" height="60">
+
+				<div class="cart-popup__desc">
+					<h3 class="cart-popup__name">
+						Ананас, 1 кг
+					</h3>
+					<span class="cart-popup__price">
+						999<span class="cart-popup__currency">₽</span>
+					</span>
+				</div>
+
+				<div class="cart-popup__quantity">
+					<button class="minus-btn cart-popup__form-btn" type="button" name="button">
+						<svg class="cart-popup__icon">
+							<use xlink:href="images/sprite.svg#icon-minus">
+							</use>
+						</svg>
+					</button>
+
+					<label class="sr-only" for="number"></label>
+					<input class="cart-popup__input" type="number" name="pineapple" id="number"
+						min="1" max="100" value="1">
+
+					<button class="plus-btn cart-popup__form-btn" type="button" name="button">
+						<svg class="cart-popup__icon">
+							<use xlink:href="images/sprite.svg#icon-plus">
+							</use>
+						</svg>
+					</button>
+				</div>
+
+				<span class="cart-popup__price cart-popup__cost" data-sum="1998">
+					1998<span class="cart-popup__currency">₽</span>
+				</span>
+
+				<button class="burger-btn burger-btn--mini close" type="button">
+					<span
+						class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
+					<span class="sr-only">удалить товар</span>
+				</button>
+			</li>
+
+			<li class="cart-popup__item">
+				<img class="cart-popup__img" src="images/products/dragon-fruit.png"
+					alt="Питахайя">
+
+				<div class="cart-popup__desc">
+					<h3 class="cart-popup__name">
+						Питахайя красная с белой мякотью, 1шт
+					</h3>
+					<span class="cart-popup__price">
+						1019<span class="cart-popup__currency">₽</span>
+					</span>
+				</div>
+
+				<div class="cart-popup__quantity">
+					<button class="minus-btn cart-popup__form-btn" type="button" name="button">
+						<svg class="cart-popup__icon">
+							<use xlink:href="images/sprite.svg#icon-minus">
+							</use>
+						</svg>
+					</button>
+
+					<label class="sr-only" for="number"></label>
+					<input class="cart-popup__input" id="number" type="number" name="dragon-fruit"
+						min="1" max="100" value="1">
+					<button class="plus-btn cart-popup__form-btn" type="button" name="button">
+						<svg class="cart-popup__icon">
+							<use xlink:href="images/sprite.svg#icon-plus">
+							</use>
+						</svg>
+					</button>
+				</div>
+
+				<span class="cart-popup__price cart-popup__cost">
+					2038<span class="cart-popup__currency">₽</span>
+				</span>
+
+				<button class="burger-btn burger-btn--mini close" type="button">
+					<span
+						class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
+					<span class="sr-only">удалить товар</span>
+				</button>
+			</li>
+		</ul>
+
+		<div class="cart-popup__sum">
+			<span class="cart-popup__text">Товаров на сумму</span>
+			<span class="cart-popup__total">
+				2038<span class="cart-popup__currency">₽</span>
+			</span>
+		</div>
+		<button class="cart-popup__submit-btn" type="submit">
+			Оформить заказ
+		</button>
+	</form>
+</div>
+<div class="mobile-menu">
+	<div class="mobile-menu__content">
+		<div class="mobile-menu__logo">
+			<a class="logo" href="#">
+				<picture>
+					<source srcset="images/logo/logo-mobile.svg" sizes="min-width: 200px">
+					<img class="logo__mobile-img" srcset="images/logo/logo-mobile.svg"
+						alt="Логотип онлайн-маркета Фрешок">
+				</picture>
+			</a>
+
+			<button class="burger-btn burger-btn--close mobile-close close" type="button">
+				<span
+					class="burger-btn__line burger-btn__line--close burger-btn__line--mobile"></span>
+				<span class="sr-only">Закрыть окно менюу</span>
+			</button>
+		</div>
+
+		<ul class="mobile-menu__user-nav">
+			<li class="mobile-menu__item mobile-menu__item--user">
+				<a class="mobile-menu__login" href="#">
+					Вход
+				</a>
+			</li>
+
+			<li class="mobile-menu__item">
+				<a class="mobile-menu__registration" href="#">
+					Регистрация
+				</a>
+			</li>
+		</ul>
+
+		<div class="catalog catalog-mobile">
+			<button class="catalog__btn" type="button">Каталог продуктов
+			</button>
+
+			<ul class="catalog__list">
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Овощи и фрукты</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Бакалея</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">
+						Молочные продукты
+					</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Хлеб</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Мясо</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Колбаса</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Рыба</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Алкоголь</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Напитки</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Торты</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Мясо</a>
+				</li>
+
+				<li class="catalog__item">
+					<a class="catalog__link" href="#">Чай, кофе</a>
+				</li>
+			</ul>
+		</div>
+
+		<address class="mobile-menu__contact">
+			<a class="mobile-menu__phone status" href="tel:+7907288365">
+				+7 907 288 365
+			</a>
+			<span class="mobile-menu__desc">
+				Санкт-Петербург, ул. Ленина, 1ß
+			</span>
+
+			<ul class="social">
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#facebook"></use>
+						</svg>
+						<span class="sr-only">Перейти в Фейсбук</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#youtube"></use>
+						</svg>
+						<span class="sr-only">Перейти в Ютуб</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#telegram"></use>
+						</svg>
+						<span class="sr-only">Перейти в Телеграм</span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a class="social__link status" href="#" target="_blank">
+						<svg class="social__icon icon">
+							<use xlink:href="images/sprite.svg#instagram"></use>
+						</svg>
+						<span class="sr-only">Перейти в Инстаграм</span>
+					</a>
+				</li>
+			</ul>
+		</address>
+
+		<ul class="nav-menu">
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					О нас
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Контакты
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Публичная оферта
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Оплата и доставка
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Вакансии
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Акции
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Отзывы
+				</a>
+			</li>
+
+			<li class="nav-menu__item">
+				<a class="nav-menu__link status" href="#">
+					Новости
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

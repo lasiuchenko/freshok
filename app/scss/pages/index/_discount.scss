@@ -2,27 +2,32 @@
   padding: 72px 0;
   text-align: center;
 
+  @include max-w($xl) {
+    padding: 0;
+  }
+
+  @include max-w($m) {
+    padding-bottom: 43px;
+  }
+
   &__content {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 18px;
+
+    @include max-w($m) {
+      margin-bottom: 4px;
+    }
   }
 
   &__item {
-    max-width: 300px;
     width: calc((100% / 4) - 30px);
     margin: 0 15px 30px;
 
     @include max-w($xl) {
-      width: calc((100% / 3) - 30px);
-    }
-
-    @include max-w($l) {
-      width: calc((100% / 2) - 30px);
-    }
-
-    @include max-w($s) {
-      width: calc(100% - 30px);
+      width: 300px;
+      margin: 0 7px 17px;
     }
   }
 }
@@ -59,6 +64,10 @@
   &__name {
     font-weight: 600;
     @include lineClamp(3);
+
+    @include max-w ($m) {
+      font-size: 14px;
+    }
   }
 
   &__bottom {
@@ -75,6 +84,7 @@
 }
 
 .availability {
+  display: block;
   margin-bottom: 5px;
   font-size: 10px;
   color: $green-900;
