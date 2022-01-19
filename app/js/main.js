@@ -137,6 +137,7 @@ $(function () {
   })
   
 
+  $('.select-style').styler();
   
   let mixerOne = mixitup('.products', {
     controls: {
