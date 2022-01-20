@@ -136,6 +136,18 @@ $(function () {
     }
   })
   
+  $('.filter-btn').on('click', function () {
+    $('.filter-btn').removeClass('filter-btn--active');
+    $(this).addClass('filter-btn--active');
+  })
+
+  $('.filter-btn--list').on('click', function () {
+    $('.products__item').addClass('products__item--list');
+  })
+  
+  $('.filter-btn--grid').on('click', function () {
+    $('.products__item').removeClass('products__item--list');
+  })
 
   $('.select-style').styler();
   

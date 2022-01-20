@@ -130,6 +130,13 @@
     color: $dark-900;
     @include lineClamp(3);
   }
+
+  &__wrap {
+    width: 100%;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .btn-heart {
@@ -173,7 +180,7 @@
 .price {
   margin-top: auto;
   line-height: 1;
-  padding: 0 18px;
+  padding: 0 14px;
 
   @include max-w($m) {
     padding: 0 10px;
@@ -190,6 +197,8 @@
   }
 
   &__new {
+    display: block;
+
     &--mini {
       font-weight: 600;
       margin-right: 12px;
@@ -201,7 +210,7 @@
   &__old {
     padding: 0;
     position: relative;
-    display: block;
+    display: inline-block;
     margin-bottom: 2px;
     color: $silver-600;
 
