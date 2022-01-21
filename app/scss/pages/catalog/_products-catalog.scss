@@ -47,11 +47,6 @@
           padding: 8px 8px 12px;
           flex-direction: row;
 
-          &__wrap {
-            height: 145px;
-            width: 178px;
-          }
-
           &__badges {
             top: 6px;
             left: 6px;
@@ -69,24 +64,34 @@
             height: 145px;
           }
 
+          &__wrap {
+            height: 140px;
+          }
+
+          &__name {
+            width: 178px;
+            margin-bottom: 17px;
+            padding: 0 0 0 14px;
+          }
+
           .btn-heart {
             top: 59px;
           }
 
           .btn--cart {
             right: 12px;
+            bottom: 12px;
           }
+        }
+
+        .availability-box {
+          display: flex;
+          width: 238px;
+          padding: 0 0 0 14px;
+          margin-bottom: 12px;
         }
       }
     }
-  }
-
-  .availability-box {
-    margin-bottom: 12px;
-  }
-
-  .btn {
-    margin-left: 15px;
   }
 
   .product-card__link {
@@ -182,7 +187,17 @@
     z-index: 1;
 
     &::-webkit-scrollbar {
-      width: 0;
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: $silver-600;
+      border: 1px solid $white;
     }
   }
 
@@ -291,18 +306,65 @@
   }
 }
 
-.availability-box {
-  padding: 0 14px;
-  width: 100%;
+.pagination {
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .availability {
-    margin-bottom: 0;
+  &__content {
+    display: flex;
+    align-items: center;
   }
 
-  .rate {
-    align-items: flex-start;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: $silver-100;
+    transition: box-shadow 0.5s;
+    outline: 0;
+    border-radius: 3px;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      border: 1px solid $silver-600;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &--active {
+      border: 1px solid $dark-500;
+    }
+  }
+
+  &__arrow {
+    width: 11px;
+    height: 18px;
   }
 }
