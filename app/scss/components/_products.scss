@@ -122,13 +122,37 @@
   }
 
   &__name {
-    padding: 0 14px;
+    padding: 0 16px;
     margin-bottom: 10px;
     font-size: 14px;
     letter-spacing: 0.03em;
     font-weight: 600;
     color: $dark-900;
     @include lineClamp(3);
+  }
+
+  &__wrap {
+    padding: 0 1px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 118px;
+  }
+}
+
+.availability-box {
+  display: none;
+  padding: 0 14px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .availability {
+    margin-bottom: 0;
+  }
+
+  .rate {
+    align-items: flex-start;
   }
 }
 
@@ -173,7 +197,7 @@
 .price {
   margin-top: auto;
   line-height: 1;
-  padding: 0 18px;
+  padding: 0 14px;
 
   @include max-w($m) {
     padding: 0 10px;
@@ -190,6 +214,8 @@
   }
 
   &__new {
+    display: block;
+
     &--mini {
       font-weight: 600;
       margin-right: 12px;
@@ -201,7 +227,7 @@
   &__old {
     padding: 0;
     position: relative;
-    display: block;
+    display: inline-block;
     margin-bottom: 2px;
     color: $silver-600;
 

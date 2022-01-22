@@ -1,7 +1,94 @@
-.jq-selectbox__select {
-  background: $white;
+.jq-selectbox {
+  display: block;
+
+  &__select {
+    width: 100%;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 15px 39px 15px 11px;
+    background: $white;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+    box-shadow: 0;
+    text-shadow: 0;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &__trigger {
+    width: 0;
+    height: 0;
+    border-left: none;
+  }
+
+  &__trigger-arrow {
+    @include pseudo;
+    background-image: url('../../images/icons/icon-arrow-right.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6px;
+    height: 11px;
+    top: 17px;
+    right: 15px;
+    transform: rotate(90deg);
+    filter: invert(1);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: transform 0.5s;
+  }
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.jq-selectbox.opened .jq-selectbox__select {
+  border: 1px solid $dark-500;
+}
+
+.focused {
+  outline: 0;
+  box-shadow: 0 0 0 3px $green-200;
+  border-radius: 3px;
+
+  .jq-selectbox__select {
+    border-color: $dark-500;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+.opened {
+  .jq-selectbox__trigger-arrow {
+    transform: rotate(-90deg);
+  }
+}
+
+.dropdown {
+  .jq-selectbox__select {
+    border-color: $dark-500;
+  }
+}
+
+.jq-selectbox__dropdown {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
   border: 1px solid $silver-600;
   border-radius: 3px;
+  background: $white;
+  box-shadow: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -9,6 +96,20 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: $dark-500;
-  box-shadow: none;
-  text-shadow: none;
+}
+
+.jq-selectbox li.selected {
+  background-color: $white;
+  color: $dark-500;
+}
+
+.jq-selectbox li {
+  min-height: 18px;
+  padding: 0 10px;
+  color: $dark-500;
+  margin-bottom: 15px;
+
+  &:first-child {
+    padding-top: 15px;
+  }
 }
