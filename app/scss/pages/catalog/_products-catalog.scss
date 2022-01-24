@@ -40,6 +40,11 @@
       &.products__item--list {
         width: calc((100% / 2) - 30px);
 
+        @include max-w($xl) {
+          width: calc((100% / 2) - 10px);
+          margin: 0 5px 10px;
+        }
+
         .product-card {
           max-height: 162px;
           max-width: 466px;
@@ -62,6 +67,14 @@
           &__img {
             width: 200px;
             height: 145px;
+
+            @include max-w($xl) {
+              width: 150px;
+            }
+
+            @include max-w($l) {
+              width: 110px;
+            }
           }
 
           &__wrap {
@@ -69,9 +82,18 @@
           }
 
           &__name {
-            width: 178px;
+            max-width: 178px;
+            width: 100%;
             margin-bottom: 17px;
-            padding: 0 0 0 14px;
+            padding: 0;
+
+            @include max-w($xl) {
+              max-width: 150px;
+            }
+
+            @include max-w($l) {
+  max-width: 165px;
+}
           }
 
           .btn-heart {
@@ -86,9 +108,14 @@
 
         .availability-box {
           display: flex;
-          width: 238px;
-          padding: 0 0 0 14px;
+          max-width: 238px;
+          width: 100%;
+          padding: 0;
           margin-bottom: 12px;
+        }
+
+        .price {
+          padding: 0;
         }
       }
     }
