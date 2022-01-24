@@ -36,6 +36,16 @@ $(function () {
 
   let clickMobile = $('.burger-btn--header, .mobile-close');
   let clickCart = $('.user-nav__link--cart, .cart-close');
+  let clickFilters = $('.filters-menu, .filters-close');
+
+  $(clickFilters).on('click', function () {
+    $('.filters-popup').slideToggle('3000');
+  });
+  
+$('.filters-popup').on('click', function (e) {
+    if ($(e.target).closest('.filters-popup__content').length == 0) {
+      $(this).slideToggle('3000')}
+  })
 
   $(clickMobile).on('click', function () {
     $('.mobile-menu').slideToggle('3000');
@@ -116,7 +126,7 @@ $(function () {
 
   let my_range = $('.filter-price__input').data('ionRangeSlider');
   
-  $('.price-range__input--from').on('blur', function () { 
+  $('.price-range__input--from').on('change', function () { 
     let from = $('.price-range__input--from').val();
     if (from && Number(from)) { 
       console.log('Update')
@@ -126,7 +136,7 @@ $(function () {
     }
   })
 
-  $('.price-range__input--to').on('blur', function () { 
+  $('.price-range__input--to').on('change', function () { 
     let to = $('.price-range__input--to').val();
     if (to && Number(to)) { 
       console.log('Update')

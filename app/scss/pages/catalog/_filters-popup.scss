@@ -1,0 +1,37 @@
+.filters-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.15);
+  z-index: 11;
+  color: $black;
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    max-width: 320px;
+    width: 100%;
+    background-color: $white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    z-index: 100;
+    overflow-y: scroll;
+  }
+
+  .filters {
+    display: block;
+  }
+
+  .filters-close {
+    margin-left: auto;
+    padding: 29px 32px;
+  }
+}

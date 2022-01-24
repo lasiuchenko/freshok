@@ -1,0 +1,195 @@
+<div class="filters-popup">
+	<div class="filters-popup__content">
+		<button class="burger-btn burger-btn--close filters-close close" type="button">
+			<span
+				class="burger-btn__line burger-btn__line--close burger-btn__line--mobile"></span>
+			<span class="sr-only">Закрыть окно менюу</span>
+		</button>
+
+		<ul class="filters">
+			<li class="filter-catalog filters__item">
+				<button class="filters__btn filters__title" type="button">Категории</button>
+
+				<ul class="filter-catalog__list filters__sub-list">
+					<li class="filters__sub-item">
+						Овощи и фрукты
+					</li>
+
+					<li class="filters__sub-item">
+						Бакалея
+					</li>
+
+					<li class="filters__sub-item">
+						Молочные продукты
+					</li>
+
+					<li class="filters__sub-item">
+						Хлеб
+					</li>
+
+					<li class="filters__sub-item">
+						Мясо
+					</li>
+
+					<li class="filters__sub-item">
+						Колбаса
+					</li>
+
+					<li class="filters__sub-item">
+						Рыба
+					</li>
+
+					<li class="filters__sub-item">
+						Алкоголь
+					</li>
+
+					<li class="filters__sub-item">
+						Напитки
+					</li>
+
+					<li class="filters__sub-item">
+						Торты
+					</li>
+
+					<li class="filters__sub-item">
+						Мясо
+					</li>
+
+					<li class="filters__sub-item">
+						Чай, кофе
+					</li>
+				</ul>
+			</li>
+
+			<li class="filter-offering filters__item">
+				<button class="filters__btn filters__title" type="button">Предложения</button>
+
+				<form class="filter-offering__form filters-form" action="#">
+					<ul class="filter-offering__list filters__sub-list">
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="discount">
+								<input class="filters-form__input" type="checkbox" name="discount"
+									id="discount">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Со скидкой</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="new">
+								<input class="filters-form__input" type="checkbox" name="new" id="new">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Новинка</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="hit">
+								<input class="filters-form__input" type="checkbox" name="hit" id="hit">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Хит</span>
+							</label>
+						</li>
+					</ul>
+				</form>
+			</li>
+
+			<li class="filter-brands filters__item">
+				<button class="filters__btn filters__title" type="button">Бренд</button>
+
+				<form class="filter-brands__form filters-form" action="#">
+					<ul class="filter-brands__list filters__sub-list">
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Coca">
+								<input class="filters-form__input" type="checkbox" name="Coca"
+									id="Coca">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">CocaCola</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Pepsi">
+								<input class="filters-form__input" type="checkbox" name="Pepsi"
+									id="Pepsi">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Pepsi</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Sprite">
+								<input class="filters-form__input" type="checkbox" name="Sprite"
+									id="Sprite">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Sprite</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Fanta">
+								<input class="filters-form__input" type="checkbox" name="Fanta"
+									id="Fanta">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Fanta</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Red-Bull">
+								<input class="filters-form__input" type="checkbox" name="Red-Bull"
+									id="Red-Bull">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">RedBull</span>
+							</label>
+						</li>
+
+						<li class="filters__sub-item">
+							<label class="filters-form__label" for="Dr-Pepper">
+								<input class="filters-form__input" type="checkbox" name="Dr-Pepper"
+									id="Dr-Pepper">
+								<span class="filters-form__checkbox"></span>
+								<span class="filters-form__text">Dr Pepper</span>
+							</label>
+						</li>
+					</ul>
+				</form>
+			</li>
+
+			<li class="filter-price filters__item">
+				<h3 class="filters__title">Цена</h3>
+				<div class="price-range">
+					<form class="price-range__form">
+						<div class="price-range__from">
+							<span class="price-range__text">от</span>
+							<label class="sr-only" for="price-from">
+								Ввести цену от
+							</label>
+							<input class="price-range__input price-range__input--from" type="number"
+								name="price-from" id="price-from">
+							<span class="price-range__currency">₽</span>
+						</div>
+
+						<div class="price-range__to">
+							<span class="price-range__text">до</span>
+							<label class="sr-only" for="price-to">
+								Ввести цену до
+							</label>
+							<input class="price-range__input price-range__input--to" type="number"
+								name="price-to" id="price-to">
+							<span class="price-range__currency">₽</span>
+						</div>
+					</form>
+				</div>
+				<form class="filter-price__form" action="#">
+					<label class="sr-only" for="range-slider">
+						Изменить цену с помощью ползунков
+					</label>
+					<input class="filter-price__input" type="text" name="range-slider"
+						data-min="0" data-max="1000" data-from="100" data-to="800"
+						id="range-slider">
+				</form>
+			</li>
+		</ul>
+	</div>
+</div>

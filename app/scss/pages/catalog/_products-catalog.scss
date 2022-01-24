@@ -6,20 +6,37 @@
     font-size: 42px;
     line-height: 1.2;
     color: $dark-900;
+
+    @include max-w($xm) {
+      padding: 30px 0;
+      font-size: 30px;
+    }
   }
 
   &__inner {
     display: flex;
+
+    @include max-w($xm) {
+      display: block;
+    }
   }
 }
 
 .shop-content {
   &__filter {
-    padding-right: 15px;
+    padding: 0 15px;
     margin-bottom: 48px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include max-w($l) {
+      justify-content: flex-start;
+    }
+
+    @include max-w($xm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -33,15 +50,29 @@
     text-align: left;
     min-height: 0;
 
+    @include max-w($xm) {
+      padding: 0 0 36px 0;
+    }
+
     &__item {
       width: calc((100% / 3) - 30px);
       margin: 0 15px 30px;
 
+      @include max-w($xm) {
+        width: calc((100% / 3) - 20px);
+        margin: 0 5px 10px;
+      }
+
+      @include max-w($xs) {
+        width: calc((100% / 2) - 20px);
+        margin: 0 5px 10px;
+      }
+
       &.products__item--list {
         width: calc((100% / 2) - 30px);
 
-        @include max-w($xl) {
-          width: calc((100% / 2) - 10px);
+        @include max-w($l) {
+          width: calc((100% / 2) - 30px);
           margin: 0 5px 10px;
         }
 
@@ -92,8 +123,8 @@
             }
 
             @include max-w($l) {
-  max-width: 165px;
-}
+              max-width: 165px;
+            }
           }
 
           .btn-heart {
@@ -146,12 +177,43 @@
     height: 35px;
     fill: $silver-600;
   }
+
+  &--list,
+  &--grid {
+    @include max-w($xm) {
+      display: none;
+    }
+  }
+}
+
+.filters-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  background-color: $silver-100;
+  border-radius: 3px;
+
+  @include max-w($l) {
+    display: flex;
+  }
+
+  &__icon--filter {
+    width: 32px;
+    height: 34px;
+    fill: $green-900;
+  }
 }
 
 .filters {
   max-width: 300px;
   width: 100%;
   margin-right: 15px;
+
+  @include max-w($l) {
+    display: none;
+  }
 
   &__item {
     position: relative;
@@ -339,6 +401,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include max-w($xm) {
+    flex-direction: column;
+  }
+
   &__content {
     display: flex;
     align-items: center;
@@ -359,7 +425,18 @@
     &:not(:last-child) {
       margin-right: 6px;
     }
+
+    @include max-w($xm) {
+      &:nth-child(3) {
+        display: none;
+      }
+
+      &:nth-child(5) {
+        display: none;
+      }
+    }
   }
+
 
   &__link {
     display: flex;
@@ -393,5 +470,11 @@
   &__arrow {
     width: 11px;
     height: 18px;
+  }
+
+  .btn {
+    @include max-w($xm) {
+      margin-bottom: 24px;
+    }
   }
 }
