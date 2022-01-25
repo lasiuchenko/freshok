@@ -88,13 +88,6 @@ $('.filters-popup').on('click', function (e) {
     parent.find('.filters__sub-list').slideToggle('3000');
   })
 
-  $('.rate__star').rateYo({
-    readOnly: true,
-    numStars: 1,
-    starWidth: "16px",
-    normalFill: "#FFB800",
-  });
-
   $('.plus-btn, .minus-btn').on('click', function () {
     let $input = $(this).parents('.cart-popup__quantity').find('.cart-popup__input');
     if($(this).hasClass('minus-btn')) {
@@ -160,7 +153,24 @@ $('.filters-popup').on('click', function (e) {
   })
 
   $('.select-style').styler();
-  
+
+  $('.rate__star').rateYo({
+    readOnly: true,
+    numStars: 1,
+    starWidth: "16px",
+    normalFill: "#ffb800",
+    starSvg: '<svg><use xlink:href="images/sprite.svg#icon-star"></use></svg>'
+  });
+
+  $('.rate__star-product').rateYo({
+    numStars: 5,
+    maxValue: 5,
+    starWidth: "16px",
+    normalFill: "#c1c1c1",
+    ratedFill: "#ffb800",
+    starSvg: '<svg><use xlink:href="images/sprite.svg#icon-star"></use></svg>'
+  });
+
   let mixerOne = mixitup('.products', {
     controls: {
     scope: 'local'

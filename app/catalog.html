@@ -1289,120 +1289,119 @@
 	</div>
 </footer>
 <div class="cart-popup">
-	<form class="cart-popup__content" action="#">
-		<div class="cart-popup__head">
-			<div class="cart-popup__wrap">
-				<h2 class="cart-popup__title">Корзина</h2>
-				<button class="cart-popup__btn" type="reset">
-					очистить корзину
-				</button>
-			</div>
+  <form class="cart-popup__content" action="#">
+    <div class="cart-popup__head">
+      <div class="cart-popup__wrap">
+        <h2 class="cart-popup__title">Корзина</h2>
+        <button class="cart-popup__btn" type="reset">
+          очистить корзину
+        </button>
+      </div>
 
-			<button class="burger-btn burger-btn--close close cart-close" type="button">
-				<span class="burger-btn__line burger-btn__line--close"></span>
-				<span class="sr-only">Закрыть корзину</span>
-			</button>
-		</div>
+      <button class="burger-btn burger-btn--close close cart-close" type="button">
+        <span class="burger-btn__line burger-btn__line--close"></span>
+        <span class="sr-only">Закрыть корзину</span>
+      </button>
+    </div>
 
-		<ul class="cart-popup__list">
-			<li class="cart-popup__item" id="1">
-				<img class="cart-popup__img" src="images/products/pineapple.png" alt="Ананас"
-					width="60" height="60">
+    <ul class="cart-popup__list">
+      <li class="cart-popup__item" id="1">
+        <img class="cart-popup__img" src="images/products/pineapple.png" alt="Ананас"
+          width="60" height="60">
 
-				<div class="cart-popup__desc">
-					<h3 class="cart-popup__name">
-						Ананас, 1 кг
-					</h3>
-					<span class="cart-popup__price">
-						999<span class="cart-popup__currency">₽</span>
-					</span>
-				</div>
+        <div class="cart-popup__desc">
+          <h3 class="cart-popup__name">
+            Ананас, 1 кг
+          </h3>
+          <span class="cart-popup__price">
+            999<span class="cart-popup__currency">₽</span>
+          </span>
+        </div>
 
-				<div class="cart-popup__quantity">
-					<button class="minus-btn cart-popup__form-btn" type="button" name="button">
-						<svg class="cart-popup__icon">
-							<use xlink:href="images/sprite.svg#icon-minus">
-							</use>
-						</svg>
-					</button>
+        <div class="quantity">
+          <button class="minus-btn quantity__form-btn" type="button" name="button">
+            <svg class="quantity__icon">
+              <use xlink:href="images/sprite.svg#icon-minus">
+              </use>
+            </svg>
+          </button>
 
-					<label class="sr-only" for="number"></label>
-					<input class="cart-popup__input" type="number" name="pineapple" id="number"
-						min="1" max="100" value="1">
+          <label class="sr-only" for="number"></label>
+          <input class="quantity__input" id="number" type="number" name="dragon-fruit"
+            min="1" max="100" value="1">
+          <button class="plus-btn quantity__form-btn" type="button" name="button">
+            <svg class="quantity__icon">
+              <use xlink:href="images/sprite.svg#icon-plus">
+              </use>
+            </svg>
+          </button>
+        </div>
 
-					<button class="plus-btn cart-popup__form-btn" type="button" name="button">
-						<svg class="cart-popup__icon">
-							<use xlink:href="images/sprite.svg#icon-plus">
-							</use>
-						</svg>
-					</button>
-				</div>
+        <span class="cart-popup__price cart-popup__cost" data-sum="1998">
+          1998<span class="cart-popup__currency">₽</span>
+        </span>
 
-				<span class="cart-popup__price cart-popup__cost" data-sum="1998">
-					1998<span class="cart-popup__currency">₽</span>
-				</span>
+        <button class="burger-btn burger-btn--mini close" type="button">
+          <span
+            class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
+          <span class="sr-only">удалить товар</span>
+        </button>
+      </li>
 
-				<button class="burger-btn burger-btn--mini close" type="button">
-					<span
-						class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
-					<span class="sr-only">удалить товар</span>
-				</button>
-			</li>
+      <li class="cart-popup__item">
+        <img class="cart-popup__img" src="images/products/dragon-fruit.png"
+          alt="Питахайя">
 
-			<li class="cart-popup__item">
-				<img class="cart-popup__img" src="images/products/dragon-fruit.png"
-					alt="Питахайя">
+        <div class="cart-popup__desc">
+          <h3 class="cart-popup__name">
+            Питахайя красная с белой мякотью, 1шт
+          </h3>
+          <span class="cart-popup__price">
+            1019<span class="cart-popup__currency">₽</span>
+          </span>
+        </div>
 
-				<div class="cart-popup__desc">
-					<h3 class="cart-popup__name">
-						Питахайя красная с белой мякотью, 1шт
-					</h3>
-					<span class="cart-popup__price">
-						1019<span class="cart-popup__currency">₽</span>
-					</span>
-				</div>
+        <div class="quantity">
+          <button class="minus-btn quantity__form-btn" type="button" name="button">
+            <svg class="quantity__icon">
+              <use xlink:href="images/sprite.svg#icon-minus">
+              </use>
+            </svg>
+          </button>
 
-				<div class="cart-popup__quantity">
-					<button class="minus-btn cart-popup__form-btn" type="button" name="button">
-						<svg class="cart-popup__icon">
-							<use xlink:href="images/sprite.svg#icon-minus">
-							</use>
-						</svg>
-					</button>
+          <label class="sr-only" for="number"></label>
+          <input class="quantity__input" id="number" type="number" name="dragon-fruit"
+            min="1" max="100" value="1">
+          <button class="plus-btn quantity__form-btn" type="button" name="button">
+            <svg class="quantity__icon">
+              <use xlink:href="images/sprite.svg#icon-plus">
+              </use>
+            </svg>
+          </button>
+        </div>
 
-					<label class="sr-only" for="number"></label>
-					<input class="cart-popup__input" id="number" type="number" name="dragon-fruit"
-						min="1" max="100" value="1">
-					<button class="plus-btn cart-popup__form-btn" type="button" name="button">
-						<svg class="cart-popup__icon">
-							<use xlink:href="images/sprite.svg#icon-plus">
-							</use>
-						</svg>
-					</button>
-				</div>
+        <span class="cart-popup__price cart-popup__cost">
+          2038<span class="cart-popup__currency">₽</span>
+        </span>
 
-				<span class="cart-popup__price cart-popup__cost">
-					2038<span class="cart-popup__currency">₽</span>
-				</span>
+        <button class="burger-btn burger-btn--mini close" type="button">
+          <span
+            class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
+          <span class="sr-only">удалить товар</span>
+        </button>
+      </li>
+    </ul>
 
-				<button class="burger-btn burger-btn--mini close" type="button">
-					<span
-						class="burger-btn__line burger-btn__line--close burger-btn__line--mini"></span>
-					<span class="sr-only">удалить товар</span>
-				</button>
-			</li>
-		</ul>
-
-		<div class="cart-popup__sum">
-			<span class="cart-popup__text">Товаров на сумму</span>
-			<span class="cart-popup__total">
-				2038<span class="cart-popup__currency">₽</span>
-			</span>
-		</div>
-		<button class="cart-popup__submit-btn" type="submit">
-			Оформить заказ
-		</button>
-	</form>
+    <div class="cart-popup__sum">
+      <span class="cart-popup__text">Товаров на сумму</span>
+      <span class="cart-popup__total">
+        2038<span class="cart-popup__currency">₽</span>
+      </span>
+    </div>
+    <button class="cart-popup__submit-btn" type="submit">
+      Оформить заказ
+    </button>
+  </form>
 </div>
 <div class="mobile-menu">
 	<div class="mobile-menu__content">

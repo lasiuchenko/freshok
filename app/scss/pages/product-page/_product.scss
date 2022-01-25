@@ -1,0 +1,146 @@
+.product-item {
+  padding: 48px 0 63px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: none;
+  }
+
+  .badge {
+    padding: 6px 8px;
+    margin-bottom: 18px;
+    width: 52px;
+    height: 28px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .price {
+    padding: 0;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 700;
+
+    &__old {
+      margin-bottom: 0;
+      margin-right: 18px;
+      font-size: 20px;
+    }
+
+    &__new {
+      font-size: 30px;
+      color: $green-900;
+    }
+  }
+}
+
+.product-slide {
+  margin-right: 30px;
+  border: 1px solid $silver-600;
+  border-radius: 4px;
+}
+
+.status-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  .availability {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+.id-num {
+  margin-right: 12px;
+  padding: 3px 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $silver-600;
+  background-color: $silver-100;
+  border-radius: 3px;
+}
+
+.buttons-box {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+
+  .quantity {
+    width: 158px;
+    height: 44px;
+    margin-right: 18px;
+
+    &__form-btn {
+      width: 44px;
+      height: 44px;
+    }
+
+    &__icon {
+      width: 30px;
+    }
+
+    &__input {
+      width: 70px;
+      height: 44px;
+      font-size: 20px;
+    }
+  }
+
+  .btn {
+    width: 253px;
+    padding: 10px 10px;
+    margin-right: 157px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &__icon-cart {
+      width: 24px;
+      height: 23px;
+      margin-right: 13px;
+    }
+  }
+
+  .btn-heart {
+    position: static;
+  }
+}
+
+.payments-delivery {
+  &__title {
+    padding-bottom: 18px;
+    border-bottom: 1px solid $silver-600;
+    font-family: $ruda;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $dark-900;
+  }
+
+  &__text {
+    padding: 18px 0;
+    line-height: 1.6;
+  }
+
+  &__link {
+    color: $green-900;
+  }
+}

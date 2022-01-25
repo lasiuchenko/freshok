@@ -86,12 +86,42 @@
     color: $dark-500;
   }
 
-  &__quantity {
+  &__sum {
     display: flex;
-    margin-right: 12px;
-    width: 84px;
-    height: 24px;
+    justify-content: space-between;
+    padding: 24px;
   }
+
+  &__total {
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+
+  &__currency {
+    font-size: 15px;
+  }
+
+  &__submit-btn {
+    margin-top: auto;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $white;
+    padding: 22px;
+    background-color: $green-900;
+  }
+}
+
+.quantity {
+  display: flex;
+  margin-right: 12px;
+  width: 84px;
+  height: 24px;
+
 
   &__input {
     width: 36px;
@@ -121,35 +151,14 @@
     height: 100%;
     fill: $white;
   }
+}
 
-  &__sum {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px;
-  }
+.minus-btn {
+  border-radius: 3px 0 0 3px;
+}
 
-  &__total {
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    color: $dark-500;
-  }
-
-  &__currency {
-    font-size: 15px;
-  }
-
-  &__submit-btn {
-    margin-top: auto;
-    width: 100%;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: $white;
-    padding: 22px;
-    background-color: $green-900;
-  }
+.plus-btn {
+  border-radius: 0 3px 3px 0;
 }
 
 .close {

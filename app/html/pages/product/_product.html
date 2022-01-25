@@ -14,23 +14,53 @@
 
           <span class="badge badge--hit">Хит</span>
 
-          <div class="availability-box">
+          <div class="status-box">
+            <div class="status-box__wrapper">
+              <div class="id-num">Код: <span>0111111</span></div>
+
+              <div class="rate">
+                <span class="rate__star-product" data-rateyo-rating="4"></span>
+              </div>
+            </div>
+
             <span class="availability">В наличии</span>
+          </div>
 
-            <div class="rate">
-              <span class="rate__num">4.5</span>
-              <span class="rate__star"></span>
+          <div class="price">
+            <span class="price__old">
+              1999 <span>₽</span>
+            </span>
+            <span class="price__new">
+              999 <span>₽</span>
+            </span>
+          </div>
+
+          <div class="buttons-box">
+            <div class="quantity">
+              <button class="minus-btn quantity__form-btn" type="button" name="button">
+                <svg class="quantity__icon">
+                  <use xlink:href="images/sprite.svg#icon-minus">
+                  </use>
+                </svg>
+              </button>
+
+              <label class="sr-only" for="number"></label>
+              <input class="quantity__input" id="number" type="number"
+                name="dragon-fruit" min="1" max="100" value="1">
+              <button class="plus-btn quantity__form-btn" type="button" name="button">
+                <svg class="quantity__icon">
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+              </button>
             </div>
 
-            <div class="price">
-              349 <span>₽</span>
-            </div>
-
-            <button class="btn btn--cart" type="button">
+            <button class="btn" type="button">
               <svg class="btn__icon-cart icon">
                 <use xlink:href="images/sprite.svg#icon-cart"></use>
               </svg>
-              <span class="sr-only">Добавить в корзину</span>
+
+              <span class="btn__text">Добавить в корзину</span>
             </button>
 
             <button class="btn-heart" type="button">
@@ -39,6 +69,20 @@
               </svg>
               <span class="sr-only">Добавить в избранное</span>
             </button>
+          </div>
+
+
+          <div class="payments-delivery">
+            <h3 class="payments-delivery__title">Доставка и оплата</h3>
+
+            <div class="payments-delivery__text">
+              <p>Минимальная сумма заказа - 100 руб.</p>
+              <p>Время доставки заказа - 60-120 мин.</p>
+              <p>Оплата осуществляется только банковской картой.</p>
+              <p>Окончательная сумма заказа формируется после сбора товаров.</p>
+            </div>
+
+            <a class="payments-delivery__link" href="#">Подробнее</a>
           </div>
         </div>
       </div>
