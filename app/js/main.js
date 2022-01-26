@@ -6,6 +6,13 @@ $(function () {
     nextArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--next"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></button>',
   });
 
+  $('.product-slide').slick({
+    infinite: false,
+    dots: false,
+    prevArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--product-prev"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--product-next"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></button>',
+  });
+
   $('.partners__list').slick({
     dots: false,
     infinite: false,
@@ -89,7 +96,7 @@ $('.filters-popup').on('click', function (e) {
   })
 
   $('.plus-btn, .minus-btn').on('click', function () {
-    let $input = $(this).parents('.cart-popup__quantity').find('.cart-popup__input');
+    let $input = $(this).parents('.quantity').find('.quantity__input');
     if($(this).hasClass('minus-btn')) {
       let count = parseFloat($input.val()) - 1;
       count = count < 1 ? 1 : count;

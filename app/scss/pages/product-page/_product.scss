@@ -42,9 +42,25 @@
 }
 
 .product-slide {
+  max-width: 630px;
   margin-right: 30px;
+  padding: 69px 105px;
   border: 1px solid $silver-600;
   border-radius: 4px;
+
+  &__img {
+    object-fit: contain;
+  }
+
+  .top-slider__arrow-btn {
+    &--product-prev {
+      left: 22px;
+    }
+
+    &--product-next {
+      right: 22px;
+    }
+  }
 }
 
 .status-box {
@@ -142,5 +158,43 @@
 
   &__link {
     color: $green-900;
+    transition: box-shadow 0.5s, text-decoration-line 0.5s, color 0.5s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+
+    &:active {
+      text-decoration-line: underline;
+      color: $green-999;
+    }
+  }
+}
+
+.product-tabs {
+  border-top: 1px solid $silver-600;
+
+  &__wrap {
+    max-width: 690px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 48px;
+  }
+
+  &__top-item {
+    padding: 16px 30px 0 30px;
+  }
+
+  &__desc p:not(:last-child) {
+    margin-bottom: 35px;
   }
 }
