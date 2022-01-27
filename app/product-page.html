@@ -338,7 +338,8 @@
     <div class="product-tabs__wrap">
       <ul class="product-tabs__top">
         <li class="product-tabs__top-item">
-          <a class="product-tabs__top-link" href="#tab1">Описание</a>
+          <a class="product-tabs__top-link product-tabs__top-link--active"
+            href="#tab1">Описание</a>
         </li>
 
         <li class="product-tabs__top-item">
@@ -351,7 +352,8 @@
       </ul>
 
       <ul class="product-tabs__content">
-        <li class="product-tabs__content-item">
+        <li class="product-tabs__content-item product-tabs__content-item--active"
+          id="tab1">
           <div class="product-tabs__desc">
             <p>
               Питахайя – это источник питательных веществ и витаминов. Содержит витамин
@@ -376,26 +378,157 @@
           </div>
         </li>
 
-        <li class="product-tabs__content-item">
-          <div class="product-tabs__specs">
-            <span>Вес:</span> 250-350 <span>г</span>;
-            <span>Калорийность (на 100<span>г</span>):</span> 50 <span>ккал</span>;
-            <span>Условия хранения:</span> температура от +3 до +8;
-            <span>Другие названия:</span> Драконов фрукт, Глаз дракона;
-            <span>Страна происхождения:</span> Вьетнам;
-            <span>Срок хранения:</span> до 5 дней.
-          </div>
+        <li class="product-tabs__content-item" id="tab2">
+          <ul class="product-tabs__specs">
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Вес:
+              </span>
+              250-350 <span>г</span>;
+            </li>
+
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Калорийность (на 100<span>г</span>):
+              </span> 50 <span>ккал</span>;
+            </li>
+
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Условия хранения:
+              </span>
+              температура от +3 до +8;
+            </li>
+
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Другие названия:
+              </span>
+              Драконов фрукт, Глаз дракона;
+            </li>
+
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Страна происхождения:
+              </span>
+              Вьетнам;
+            </li>
+
+            <li class="product-tabs__specs-item">
+              <span class="product-tabs__specs-item--bold">
+                Срок хранения:
+              </span> до 5 дней.
+            </li>
+          </ul>
         </li>
 
-        <li class="product-tabs__content-item">
+        <li class="product-tabs__content-item" id="tab3">
           <div class="product-tabs__review">
+            <h3 class="product-title">Мнения наших клиентов</h3>
 
+            <ul class="reviews">
+              <li class="reviews__item">
+                <div class="reviews__content">
+                  <div class="reviews__wrap">
+                    <img class="reviews__img" src="images/users-avatars/user-avatar.jpg"
+                      alt="Аватар пользователя">
+
+                    <div class="reviews__personal-data">
+                      <div class="reviews__name">Андрей</div>
+                      <div class="reviews__date">10.06.2021</div>
+                    </div>
+                  </div>
+
+                  <div class="rate">
+                    <span class="rate__review" data-rateyo-rating="4"></span>
+                  </div>
+                </div>
+
+                <div class="reviews__text">
+                  <p>
+                    Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать
+                    еще!))
+                  </p>
+                </div>
+              </li>
+
+              <li class="reviews__item">
+                <div class="reviews__content">
+                  <div class="reviews__wrap">
+                    <img class="reviews__img" src="images/users-avatars/user-avatar.jpg"
+                      alt="Аватар пользователя">
+
+                    <div class="reviews__personal-data">
+                      <div class="reviews__name">Екатерина Белая</div>
+                      <div class="reviews__date">7.06.2021</div>
+                    </div>
+                  </div>
+
+                  <div class="rate">
+                    <span class="rate__review" data-rateyo-rating="5"></span>
+                  </div>
+                </div>
+
+                <div class="reviews__text">
+                  <p>
+                    Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же
+                    яркий (просто
+                    взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад,
+                    что есть такая
+                    возможность - пробовать экзотические фрукты.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="product-tabs__comment comment">
+            <h3 class="product-title">Оставить отзыв</h3>
+
+            <div class="comment__wrap">
+              <div class="comment__title">Ваша оценка <span>*</span></div>
+
+              <div class="rate">
+                <span class="rate__comment" data-rateyo-rating="0"></span>
+              </div>
+            </div>
+
+            <form class="comment__form" action="#">
+              <label class="comment__review" for="review">
+                Ваш отзыв <span>*</span>
+                <textarea class="comment__textarea" cols="48" rows="6" id="review"
+                  placeholder="Введите текст отзыва"></textarea>
+              </label>
+
+              <div class="comment__form-wrap">
+                <label class="comment__user-name">Имя
+                  <input class="comment__input" type="text"
+                    placeholder="Введите ваше имя">
+                </label>
+
+                <label class="comment__user-mail">Email <span>*</span>
+                  <input class="comment__input" type="email"
+                    placeholder="youremail@mail.com">
+                </label>
+              </div>
+
+              <label class="comment__save">
+                <input class="comment__input" type="checkbox">
+                <span class="comment__save-checkbox"></span>
+                Сохранить моё имя, email и адрес сайта в этом браузере для последующих
+                моих
+                комментариев.
+              </label>
+
+              <button class="btn" type="submit">
+                Оставить отзыв
+              </button>
+            </form>
           </div>
         </li>
       </ul>
     </div>
   </div>
-
 </section>
 </main>
 
