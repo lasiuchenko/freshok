@@ -41,6 +41,35 @@ $(function () {
     ]
   });
 
+  $('.product-interested__slider').slick({
+    infinite: false,
+    dots: false,
+    arrows: true,
+    speed: 500,
+    slidesToShow: 4, 
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--interested-prev"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="top-slider__arrow-btn top-slider__arrow-btn--interested-next"><svg class="top-slider__arrow"><use xlink:href="images/sprite.svg#icon-arrow-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          dots: true,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 785,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          arrows: false,
+        }
+      }
+    ]
+  });
+
   let clickMobile = $('.burger-btn--header, .mobile-close');
   let clickCart = $('.user-nav__link--cart, .cart-close');
   let clickFilters = $('.filters-menu, .filters-close');

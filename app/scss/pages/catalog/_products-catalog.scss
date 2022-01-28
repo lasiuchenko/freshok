@@ -378,11 +378,11 @@
     clip: rect(0 0 0 0);
 
     &:checked+.filters-form__checkbox {
-      background-image: url('../images/icons/icon-check.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      border-color: $dark-500;
-    }
+  background-image: url('../images/icons/icon-check.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-color: $dark-500;
+}
   }
 
   &__checkbox {

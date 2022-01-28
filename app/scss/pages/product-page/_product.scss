@@ -1,8 +1,24 @@
 .product-item {
   padding: 48px 0 63px;
 
+  @include max-w($l) {
+    padding-bottom: 30px;
+  }
+
   &__inner {
     display: flex;
+    justify-content: space-between;
+
+    @include max-w($l) {
+      padding-top: 49px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    max-width: 630px;
+    width: 100%;
   }
 
   &__title {
@@ -10,6 +26,11 @@
     font-weight: 600;
     line-height: 1.2;
     text-transform: none;
+
+    @include max-w($l) {
+      position: absolute;
+      top: 200px;
+    }
   }
 
   .badge {
@@ -38,18 +59,43 @@
       font-size: 30px;
       color: $green-900;
     }
+
+    @include max-w($l) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .product-slide {
   max-width: 630px;
+  width: 100%;
   margin-right: 30px;
   padding: 69px 105px;
   border: 1px solid $silver-600;
   border-radius: 4px;
 
+  @include max-w($xl) {
+    max-width: 490px;
+    padding: 20px 38px;
+  }
+
+  @include max-w($l) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  @include max-w($xm) {
+    max-width: 348px;
+  }
+
   &__img {
     object-fit: contain;
+    margin: auto;
+
+    @include max-w($xm) {
+      width: 270px;
+      height: 270px;
+    }
   }
 
   .top-slider__arrow-btn {
@@ -68,8 +114,17 @@
   justify-content: space-between;
   margin-bottom: 30px;
 
+  @include max-w($l) {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
   &__wrapper {
     display: flex;
+
+    @include max-w($l) {
+      margin-bottom: 18px;
+    }
   }
 
   .availability {
@@ -90,7 +145,7 @@
   border-radius: 3px;
 }
 
-.buttons-box {
+.order-box {
   margin-bottom: 32px;
   display: flex;
   align-items: center;
@@ -115,11 +170,17 @@
       font-size: 20px;
     }
   }
+}
+
+.buttons-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .btn {
     width: 253px;
     padding: 10px 10px;
-    margin-right: 157px;
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -127,10 +188,24 @@
     line-height: 1;
     text-transform: uppercase;
 
+    @include max-w($xs) {
+      width: 44px;
+    }
+
     &__icon-cart {
       width: 24px;
       height: 23px;
       margin-right: 13px;
+
+      @include max-w($xs) {
+        margin-right: 0;
+      }
+    }
+
+    &__text {
+      @include max-w($xs) {
+        display: none;
+      }
     }
   }
 
@@ -184,6 +259,7 @@
   &__wrap {
     max-width: 690px;
     margin: 0 auto;
+    padding: 0 15px;
   }
 
   &__top {
@@ -201,6 +277,11 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $dark-900;
+
+    @include max-w($l) {
+      padding-top: 12px;
+      font-size: 14px;
+    }
   }
 
   &__top-link {
@@ -225,6 +306,10 @@
 
   &__content {
     padding-bottom: 72px;
+
+    @include max-w($l) {
+      padding-bottom: 48px;
+    }
   }
 
   &__content-item {
@@ -306,40 +391,100 @@
 
   &__form {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    & input {
-      display: block;
-    }
-  }
-
-  &__review {
-    max-width: 400px;
-    width: 100%;
-    margin-right: 30px;
-  }
-
-  &__textarea {
-    height: 165px;
-  }
-
-  &__input,
-  &__textarea {
-    margin-top: 12px;
-    padding: 18px;
-    border: 1px solid $silver-600;
-    border-radius: 3px;
+    flex-direction: column;
   }
 
   &__form-wrap {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include max-w($m) {
+      flex-direction: column;
+    }
+  }
+
+  &__review {
+    margin-right: 30px;
+    max-height: 198px;
+
+    @include max-w($m) {
+      margin-bottom: 18px;
+      margin-right: 0;
+    }
+  }
+
+  &__textarea {
+    height: 165px;
+    width: 400px;
+  }
+
+  &__input {
+    width: 260px;
+  }
+
+  &__input,
+  &__textarea {
+    margin-top: 5px;
+    padding: 18px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $silver-600;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    @include max-w($m) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__user-name {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__save {
     margin-bottom: 24px;
+    padding-left: 36px;
+  }
+
+  &__input-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked+.comment__save-checkbox {
+      background-image: url('../images/icons/icon-check.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-color: $dark-500;
+    }
+  }
+
+  &__save-checkbox {
+    position: absolute;
+    margin-left: -36px;
+    width: 24px;
+    height: 24px;
+    background-color: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $dark-500;
+    }
   }
 }
 
@@ -351,4 +496,10 @@
   line-height: 1.2;
   text-transform: uppercase;
   color: $dark-900;
+}
+
+.btn {
+  &--product-form {
+    width: 194px;
+  }
 }

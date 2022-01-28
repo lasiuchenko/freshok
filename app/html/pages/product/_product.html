@@ -46,7 +46,7 @@
             </span>
           </div>
 
-          <div class="buttons-box">
+          <div class="order-box">
             <div class="quantity">
               <button class="minus-btn quantity__form-btn" type="button" name="button">
                 <svg class="quantity__icon">
@@ -66,20 +66,22 @@
               </button>
             </div>
 
-            <button class="btn" type="button">
-              <svg class="btn__icon-cart icon">
-                <use xlink:href="images/sprite.svg#icon-cart"></use>
-              </svg>
+            <div class="buttons-box">
+              <button class="btn" type="button">
+                <svg class="btn__icon-cart icon">
+                  <use xlink:href="images/sprite.svg#icon-cart"></use>
+                </svg>
 
-              <span class="btn__text">Добавить в корзину</span>
-            </button>
+                <span class="btn__text">Добавить в корзину</span>
+              </button>
 
-            <button class="btn-heart" type="button">
-              <svg class="btn-heart__icon">
-                <use xlink:href="images/sprite.svg#badge-heart"></use>
-              </svg>
-              <span class="sr-only">Добавить в избранное</span>
-            </button>
+              <button class="btn-heart" type="button">
+                <svg class="btn-heart__icon">
+                  <use xlink:href="images/sprite.svg#badge-heart"></use>
+                </svg>
+                <span class="sr-only">Добавить в избранное</span>
+              </button>
+            </div>
           </div>
 
 
@@ -260,33 +262,35 @@
             </div>
 
             <form class="comment__form" action="#">
-              <label class="comment__review" for="review">
-                Ваш отзыв <span>*</span>
-                <textarea class="comment__textarea" cols="48" rows="6" id="review"
-                  placeholder="Введите текст отзыва"></textarea>
-              </label>
-
               <div class="comment__form-wrap">
-                <label class="comment__user-name">Имя
-                  <input class="comment__input" type="text"
-                    placeholder="Введите ваше имя">
+                <label class="comment__review" for="review">
+                  Ваш отзыв <span>*</span>
+                  <textarea class="comment__textarea" cols="48" rows="6" id="review"
+                    placeholder="Введите текст отзыва" required></textarea>
                 </label>
 
-                <label class="comment__user-mail">Email <span>*</span>
-                  <input class="comment__input" type="email"
-                    placeholder="youremail@mail.com">
-                </label>
+                <div class="comment__review-wrap">
+                  <label class="comment__user-name">Имя
+                    <input class="comment__input" type="text"
+                      placeholder="Введите ваше имя" required>
+                  </label>
+
+                  <label class="comment__user-mail">Email <span>*</span>
+                    <input class="comment__input" type="email"
+                      placeholder="youremail@mail.com" required>
+                  </label>
+                </div>
               </div>
 
               <label class="comment__save">
-                <input class="comment__input" type="checkbox">
+                <input class="comment__input-checkbox" type="checkbox">
                 <span class="comment__save-checkbox"></span>
                 Сохранить моё имя, email и адрес сайта в этом браузере для последующих
                 моих
                 комментариев.
               </label>
 
-              <button class="btn" type="submit">
+              <button class="btn btn--product-form" type="submit">
                 Оставить отзыв
               </button>
             </form>
